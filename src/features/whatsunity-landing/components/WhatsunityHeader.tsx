@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Moon, Sun, ArrowLeft, ArrowRight, Menu, X, Globe } from "lucide-react";
+import { Moon, Sun, ArrowLeft, ArrowRight, Menu, X, Globe, ExternalLink } from "lucide-react";
 import { useTheme } from "@/theme/ThemeProvider";
 import { WhatsUnityLogoText } from "./WhatsUnityLogoText";
 import type { Locale, WhatsunityContent } from "../data/whatsunityContent";
@@ -95,6 +95,20 @@ export function WhatsunityHeader({ locale, onToggleLocale, content }: Props) {
             <span>{isRtl ? "مطور المنظومة" : "Architect"}</span>
           </a>
 
+          {/* Launch Web App PWA Button */}
+          <a
+            href="https://app.whatsunity.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-400 px-3.5 py-1.5 text-xs font-extrabold text-[#04140c] shadow-sm shadow-emerald-500/20 wu-pressable hover:brightness-110 ${
+              isRtl ? "wu-font-ar-display" : "wu-font-en-display"
+            }`}
+            title={isRtl ? "تشغيل تطبيق WhatsUnity السكني عبر المتصفح" : "Launch WhatsUnity PWA Web App"}
+          >
+            <span>{isRtl ? "دخول التطبيق" : "Launch App"}</span>
+            <ExternalLink className="h-3 w-3" />
+          </a>
+
           {/* Mobile Drawer Trigger */}
           <button
             type="button"
@@ -130,7 +144,20 @@ export function WhatsunityHeader({ locale, onToggleLocale, content }: Props) {
                   {link.label}
                 </a>
               ))}
-              <div className="mt-2 border-t border-slate-200 dark:border-white/10 pt-3">
+              <div className="mt-2 border-t border-slate-200 dark:border-white/10 pt-3 flex flex-col gap-2.5">
+                <a
+                  href="https://app.whatsunity.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-400 py-2.5 text-xs font-extrabold text-[#04140c] shadow-sm wu-pressable ${
+                    isRtl ? "wu-font-ar-display" : "wu-font-en-display"
+                  }`}
+                >
+                  <span>{isRtl ? "دخول التطبيق (PWA)" : "Launch Web App"}</span>
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+
                 <a
                   href="https://www.nouradawy.tech"
                   target="_blank"
