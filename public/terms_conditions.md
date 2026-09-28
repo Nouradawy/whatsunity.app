@@ -39,5 +39,5 @@ We may update these Terms from time to time. Continued use of the Application af
 
 ## 9. Contact Us
 For any inquiries regarding these Terms, please contact:
-**Email:** support@whatsunity.work.gd
+**Email:** nouradawy@whatsunity.app
 

@@ -103,6 +103,6 @@ WhatsUnity هو نظام تشغيل سكني متعدد المستأجرين (Mu
 
 - **الموقع الإلكتروني**: [https://www.nouradawy.tech/](https://www.nouradawy.tech/)
 - **صفحة المنظومة**: [https://whatsunity.app](https://whatsunity.app?lang=ar)
-- **البريد الإلكتروني**: noureldin.adawy@gmail.com
-- **واتساب**: +201099684812
+- **البريد الإلكتروني**: nouradawy@whatsunity.app
+- **واتساب**: @nouradawy
 
