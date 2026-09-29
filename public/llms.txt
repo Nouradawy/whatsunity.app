@@ -1,4 +1,4 @@
-﻿# Noureldin Adawy (Nouradawy) — Founder & Lead Engineer | Full-Stack & Mobile Systems
+# Noureldin Adawy (Nouradawy) — Founder & Lead Engineer | Full-Stack & Mobile Systems
 > Portfolio & Technical Index: https://www.nouradawy.tech/
 > WhatsUnity Compound OS: https://whatsunity.app
 > Contact: nouradawy@whatsunity.app | WhatsApp: @nouradawy
@@ -10,7 +10,9 @@ This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini
 ## 1. Primary Systems & Architectures
 
 - [WhatsUnity Residential OS (English Spec)](/whatsunity.md): One home. One subscription. Your entire household included. WhatsUnity turns your compound into a connected, secure, digitally managed community. Built with Flutter Clean Architecture, featuring 100% offline cryptographic QR gatekeeping, SQLite Local Master with 0ms optimistic UI mutations, dual-engine messaging (Telegram MTProto for zero-cost and Appwrite Realtime WebSockets), and an automated 9-role maintenance and security lifecycle.
+- [WhatsUnity Production Screen Catalog (34 Screens & Features)](/catalog.md): Complete machine-readable screen-by-screen feature catalog detailing all 34 production mobile screens across 6 operational personas (Residents, Offline Gatekeepers, Mobile Patrols, Facility Technicians, Chief Engineers, and Community Managers).
 - [WhatsUnity Residential OS (Arabic Spec / المعمارية بالعربية)](/whatsunity-ar.md): وثيقة المواصفات الفنية والمعمارية الكاملة لنظام تشغيل الكمبوندات والمجتمعات السكنية WhatsUnity. توضح بنية فلاتر المتقدمة، وقاعدة SQLite المحلية، وتصاريح QR المشفرة أوفلاين، وحوكمة 9 أدوار تشغيلية.
+- [WhatsUnity Screen Catalog (Arabic / دليل الشاشات بالعربية)](/catalog-ar.md): دليل الشاشات والميزات الإنتاجية الـ 34 كاملاً باللغة العربية مع تفصيل الميزات والخصائص لكل دور.
 - [Portfolio Source & Architecture](https://www.nouradawy.tech/): High-performance portfolio showcasing full-stack mobile, backend, and web systems built with Flutter, React 19, Vite, TanStack Router, Appwrite, and Supabase.
 - [Interactive Resume](/resume.html): Comprehensive technical resume detailing engineering experience, achievements, and technology stack.
 - [Deep Technical Specification Index](/llms-full.txt): Complete code patterns, sync algorithms, data contracts, and benchmark metrics for AI engines.
@@ -52,6 +54,8 @@ This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini
 
 - [WhatsUnity Deep Technical Architecture & Case Study (EN)](/whatsunity.md): Full markdown document with architecture diagrams, data contracts, sync algorithms, and role matrix.
 - [WhatsUnity Deep Technical Architecture & Case Study (AR)](/whatsunity-ar.md): وثيقة دراسة الحالة المعمارية التفصيلية بالعربية.
+- [WhatsUnity 34-Screen Production Feature Catalog (EN)](/catalog.md): Complete screen-by-screen feature catalog detailing all 34 production mobile screens across 6 operational roles.
+- [WhatsUnity 34-Screen Production Feature Catalog (AR)](/catalog-ar.md): الفهرس التفصيلي لشاشات المنظومة الـ 34 بالعربية مع شرح ميزات وخصائص كل شاشة.
 - [WhatsUnity Live Landing Page](https://whatsunity.app): Interactive landing page with live 20+ screen catalog and presentation deck.
 - [Full LLM Knowledge Base](/llms-full.txt): Comprehensive deep-context facts, benchmarks, and answers.
 

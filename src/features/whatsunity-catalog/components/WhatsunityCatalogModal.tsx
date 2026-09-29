@@ -31,6 +31,7 @@ interface Props {
   onClose: () => void;
   initialRole?: RoleKey | "all";
   initialTab?: "catalog" | "evolution";
+  initialPageIndex?: string;
 }
 
 type SlideItem =
@@ -43,6 +44,7 @@ export function WhatsunityCatalogModal({
   onClose,
   initialRole = "all",
   initialTab = "catalog",
+  initialPageIndex,
 }: Props) {
   const [activeMainTab, setActiveMainTab] = useState<"catalog" | "evolution">(initialTab);
   const [locale, setLocale] = useState<Locale>("ar");
@@ -85,10 +87,17 @@ export function WhatsunityCatalogModal({
     return items;
   }, [activeRole, filteredPages]);
 
-  // Reset slider index when role changes
+  // Reset or set slider index when role or initialPageIndex changes
   useEffect(() => {
+    if (open && initialPageIndex && viewMode === "slider") {
+      const targetIdx = slides.findIndex((s) => s.type === "page" && s.page.index === initialPageIndex);
+      if (targetIdx !== -1) {
+        setCurrentSlideIndex(targetIdx);
+        return;
+      }
+    }
     setCurrentSlideIndex(0);
-  }, [activeRole]);
+  }, [open, activeRole, initialPageIndex, slides, viewMode]);
 
   // Keyboard navigation & Esc listener
   useEffect(() => {

@@ -322,7 +322,7 @@
         },
         {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\", </whatsunity.md>; rel=\"service-doc\", </llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"service-desc\""
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\", </whatsunity.md>; rel=\"service-doc\", </catalog.md>; rel=\"catalog\", </catalog-ar.md>; rel=\"catalog\", </llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"service-desc\""
         }
       ]
     }

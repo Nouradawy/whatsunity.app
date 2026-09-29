@@ -1,4 +1,4 @@
-﻿# WhatsUnity: One Home. One Subscription. Your Entire Household Included.
+# WhatsUnity: One Home. One Subscription. Your Entire Household Included.
 
 > **Definition**: WhatsUnity turns your compound into a connected, secure, digitally managed community.
 
@@ -126,4 +126,53 @@ The maintenance subsystem implements a robust 5-tier state machine:
 - **Offline Gatekeeper Uptime**: 100% operational during complete 4G/Wi-Fi outages.
 - **Maintenance Dispatch Turnaround**: 78% reduction in ticket resolution time.
 - **Messaging Infrastructure Cost**: 0$ cloud cost in Telegram MTProto configuration.
+
+---
+
+## 9. Interactive 34-Screen Production Feature Catalog
+
+For detailed screen-by-screen feature breakdowns, user personas, and state transitions, refer to the machine-readable [Production Screen Catalog (/catalog.md)](/catalog.md) (or Arabic: [/catalog-ar.md](/catalog-ar.md)).
+
+### Screen & Persona Matrix:
+1. **Community Hub (Screens 01 - 07)**:
+   - Screen 01: Home Feed & Social Publishing
+   - Screen 02: Social Feed — State Transitions & Empty States
+   - Screen 03: Community Messaging Channels (General & Building)
+   - Screen 04: Building Chat & Financial Ledger (Net Building Balance)
+   - Screen 05: Community Polls & Decision Hub
+   - Screen 06: Maintenance Reports & Resident Filing
+   - Screen 07: Building Directory & Verified Contacts
+2. **Security & Operations Suite (Screens 08 - 22)**:
+   - Screen 08: Gatekeeper Overstayed Visitors Telemetry
+   - Screen 09: Unit Directives & Host Resident Verification
+   - Screen 10: Courier Protocol & Gate Directives (Sub-3s Check)
+   - Screen 11: 100% Offline Cryptographic QR Pass Validation
+   - Screen 12: Gate Pass Operations & Security Details
+   - Screen 13: Overstay Protocol & Patrol Tactical Dispatch
+   - Screen 14: Pass Observation & Threat Alert Matrix
+   - Screen 15: Gatekeeper Manual Visitor Entry
+   - Screen 16: Gate Guard Shift Portal
+   - Screen 17: Security Incident Dispatch & Alarm Room
+   - Screen 18: Gate Activity Logbook & Access Audit
+   - Screen 19: Mobile Patrol Guard Portal
+   - Screen 20: NFC Checkpoint Telemetry & Patrol Verification
+   - Screen 21: Security Incident Evidence Logging
+   - Screen 22: Lost & Found RTL Watermarking & Cataloging
+3. **Facility Engineering & Maintenance (Screens 23 - 28)**:
+   - Screen 23: Maintenance Desk & Ticket Triage (9 Trades)
+   - Screen 24: Work Orders & Spare Parts Console
+   - Screen 25: Field Technician Active Stopwatch & Repairs
+   - Screen 26: Chief Engineer Operational Takeover
+   - Screen 27: Workforce Capacity & Dispatch Balancing
+   - Screen 28: Duty Schedules & Holiday Calendars (24/7 Readiness)
+4. **Community Manager & Governance (Screens 29 - 31)**:
+   - Screen 29: Community Manager Operations & SOS Alert Feed
+   - Screen 30: Governance: Penalties, Sanctions & Standard Tariff List
+   - Screen 31: Governance: Treasury & Reserve Fund Accounting
+5. **Plans & Editions (Screen 32)**:
+   - Screen 32: Editions: Free vs Premium & Interactive Sandbox
+6. **Administrative Governance Console (Screens 33 - 34)**:
+   - Screen 33: Member Verification & Access Control (KYC Review)
+   - Screen 34: Tactical Broadcast Publisher & Alerts
+
 

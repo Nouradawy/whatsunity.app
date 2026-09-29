@@ -12,6 +12,9 @@ export default function handler(req, res) {
   } else if (url.includes("terms-conditions")) {
     filename = "terms_conditions.md";
     tokens = "720";
+  } else if (url.includes("catalog")) {
+    filename = url.includes("lang=ar") ? "catalog-ar.md" : "catalog.md";
+    tokens = "4500";
   } else if (url.includes("lang=ar")) {
     filename = "whatsunity-ar.md";
     tokens = "2230";

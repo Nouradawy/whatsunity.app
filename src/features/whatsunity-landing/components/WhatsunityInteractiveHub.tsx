@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Sparkles, Layers, Presentation, Maximize2 } from "lucide-react";
 import { WhatsunityCatalogInline } from "@/features/whatsunity-catalog/components/WhatsunityCatalogInline";
 import { WhatsunityCatalogModal } from "@/features/whatsunity-catalog/components/WhatsunityCatalogModal";
+import { WhatsunityScreenMatrix } from "@/features/whatsunity-catalog/components/WhatsunityScreenMatrix";
 import { WhatsunityPresentationModal } from "./WhatsunityPresentationModal";
 import type { Locale, WhatsunityContent } from "../data/whatsunityContent";
 
@@ -14,7 +15,20 @@ interface Props {
 export function WhatsunityInteractiveHub({ locale, content }: Props) {
   const [catalogModalOpen, setCatalogModalOpen] = useState(false);
   const [catalogInitialTab, setCatalogInitialTab] = useState<"catalog" | "evolution">("catalog");
+  const [selectedScreenIndex, setSelectedScreenIndex] = useState<string | undefined>(undefined);
   const [presentationModalOpen, setPresentationModalOpen] = useState(false);
+
+  const handleOpenGeneralCatalog = () => {
+    setSelectedScreenIndex(undefined);
+    setCatalogInitialTab("catalog");
+    setCatalogModalOpen(true);
+  };
+
+  const handleSelectScreen = (pageIndex: string) => {
+    setSelectedScreenIndex(pageIndex);
+    setCatalogInitialTab("catalog");
+    setCatalogModalOpen(true);
+  };
 
   const isRtl = locale === "ar";
   const hub = content.interactiveHub;
@@ -87,10 +101,7 @@ export function WhatsunityInteractiveHub({ locale, content }: Props) {
             <div className="mt-8 flex flex-col gap-2.5">
               <button
                 type="button"
-                onClick={() => {
-                  setCatalogInitialTab("catalog");
-                  setCatalogModalOpen(true);
-                }}
+                onClick={handleOpenGeneralCatalog}
                 className={`inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-blue-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-600/25 wu-pressable hover:bg-blue-500 ${
                   isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                 }`}
@@ -101,6 +112,7 @@ export function WhatsunityInteractiveHub({ locale, content }: Props) {
               <button
                 type="button"
                 onClick={() => {
+                  setSelectedScreenIndex(undefined);
                   setCatalogInitialTab("evolution");
                   setCatalogModalOpen(true);
                 }}
@@ -178,19 +190,23 @@ export function WhatsunityInteractiveHub({ locale, content }: Props) {
           </div>
 
           <WhatsunityCatalogInline
-            onOpenFullscreen={() => {
-              setCatalogInitialTab("catalog");
-              setCatalogModalOpen(true);
-            }}
+            onOpenFullscreen={handleOpenGeneralCatalog}
+          />
+
+          {/* Full 34-Screen Production Feature Matrix for Visitors & AI Agents */}
+          <WhatsunityScreenMatrix
+            locale={locale}
+            onSelectScreen={handleSelectScreen}
           />
         </div>
       </div>
 
-      {/* Catalog Modal (20+ Screens + Evolution) */}
+      {/* Catalog Modal (34 Screens + Evolution) */}
       <WhatsunityCatalogModal
         open={catalogModalOpen}
         onClose={() => setCatalogModalOpen(false)}
         initialTab={catalogInitialTab}
+        initialPageIndex={selectedScreenIndex}
       />
 
       {/* Presentation Deck Modal */}

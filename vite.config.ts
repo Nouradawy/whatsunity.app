@@ -48,6 +48,9 @@ const agentDiscoveryAndNegotiationPlugin = () => {
       } else if (pathname.includes("terms-conditions")) {
         mdFile = "terms_conditions.md";
         tokens = 720;
+      } else if (pathname.includes("catalog")) {
+        mdFile = url.includes("lang=ar") ? "catalog-ar.md" : "catalog.md";
+        tokens = 4500;
       } else if (pathname === "/auth.md") {
         mdFile = "auth.md";
         tokens = 910;
@@ -111,7 +114,7 @@ export default defineConfig({
     port: 3000,
     host: true,
     headers: {
-      Link: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/ai-catalog.json>; rel="ai-catalog", </whatsunity.md>; rel="service-doc", </llms.txt>; rel="describedby", </llms-full.txt>; rel="service-desc"',
+      Link: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/ai-catalog.json>; rel="ai-catalog", </whatsunity.md>; rel="service-doc", </catalog.md>; rel="catalog", </catalog-ar.md>; rel="catalog", </llms.txt>; rel="describedby", </llms-full.txt>; rel="service-desc"',
       Vary: "Accept",
     },
   },
@@ -119,7 +122,7 @@ export default defineConfig({
     port: 3000,
     host: true,
     headers: {
-      Link: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/ai-catalog.json>; rel="ai-catalog", </whatsunity.md>; rel="service-doc", </llms.txt>; rel="describedby", </llms-full.txt>; rel="service-desc"',
+      Link: '</.well-known/api-catalog>; rel="api-catalog", </.well-known/ai-catalog.json>; rel="ai-catalog", </whatsunity.md>; rel="service-doc", </catalog.md>; rel="catalog", </catalog-ar.md>; rel="catalog", </llms.txt>; rel="describedby", </llms-full.txt>; rel="service-desc"',
       Vary: "Accept",
     },
   },

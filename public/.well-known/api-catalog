@@ -19,6 +19,16 @@
           "href": "https://whatsunity.app/whatsunity-ar.md",
           "type": "text/markdown",
           "title": "WhatsUnity Residential OS Architecture & Spec (Arabic)"
+        },
+        {
+          "href": "https://whatsunity.app/catalog.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity 34-Screen Production Feature Catalog (English)"
+        },
+        {
+          "href": "https://whatsunity.app/catalog-ar.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity 34-Screen Production Feature Catalog (Arabic)"
         }
       ],
       "describedby": [

@@ -50,6 +50,18 @@
       ]
     },
     {
+      "identifier": "urn:air:whatsunity.app:doc:screen-catalog",
+      "displayName": "WhatsUnity 34-Screen Production Feature Catalog",
+      "type": "text/markdown",
+      "url": "https://whatsunity.app/catalog.md",
+      "representativeQueries": [
+        "whatsunity screens catalog",
+        "explore whatsunity 34 production mobile screens",
+        "offline gatekeeper and patrol screen workflows",
+        "maintenance triage and chief engineer screens"
+      ]
+    },
+    {
       "identifier": "urn:air:whatsunity.app:api:catalog",
       "displayName": "RFC 9727 Machine-Readable API Catalog",
       "type": "application/linkset+json",
