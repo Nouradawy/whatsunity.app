@@ -15,6 +15,35 @@
     "a2a": "https://whatsunity.app/a2a",
     "mcp": "https://whatsunity.app/mcp"
   },
+  "skills": [
+    {
+      "id": "gate-pass-verification",
+      "name": "Gate Pass Verification",
+      "description": "Cryptographically verify a residential or visitor QR gate pass offline or online in sub-50ms."
+    },
+    {
+      "id": "maintenance-dispatch",
+      "name": "Maintenance Dispatch",
+      "description": "Triage and dispatch maintenance work orders across 9 specialized operational trades."
+    },
+    {
+      "id": "community-status",
+      "name": "Community Status Telemetry",
+      "description": "Query live community health, active security gates, and operational workload."
+    }
+  ],
+  "supportedInterfaces": [
+    {
+      "protocol": "a2a",
+      "version": "1.0",
+      "endpoint": "https://whatsunity.app/a2a"
+    },
+    {
+      "protocol": "mcp",
+      "version": "1.0",
+      "endpoint": "https://whatsunity.app/mcp"
+    }
+  ],
   "authentication": {
     "type": "oauth2",
     "discovery": "https://whatsunity.app/.well-known/oauth-authorization-server",

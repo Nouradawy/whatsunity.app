@@ -1,7 +1,8 @@
 {
-  "resource": "https://whatsunity.app",
+  "resource": "https://www.whatsunity.app",
   "authorization_servers": [
-    "https://whatsunity.app"
+    "https://whatsunity.app",
+    "https://www.whatsunity.app"
   ],
   "scopes_supported": [
     "compounds:read",
