@@ -36,12 +36,12 @@
     {
       "protocol": "a2a",
       "version": "1.0",
-      "endpoint": "https://whatsunity.app/a2a"
+      "url": "https://whatsunity.app/a2a"
     },
     {
       "protocol": "mcp",
       "version": "1.0",
-      "endpoint": "https://whatsunity.app/mcp"
+      "url": "https://whatsunity.app/mcp"
     }
   ],
   "authentication": {
