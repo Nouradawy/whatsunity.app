@@ -58,15 +58,15 @@
     },
     {
       "source": "/",
-      "destination": "/app.html"
+      "destination": "/app"
     },
     {
       "source": "/index.html",
-      "destination": "/app.html"
+      "destination": "/app"
     },
     {
       "source": "/whatsunity",
-      "destination": "/app.html"
+      "destination": "/app"
     },
     {
       "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
@@ -81,7 +81,7 @@
     },
     {
       "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
-      "destination": "/app.html"
+      "destination": "/app"
     }
   ],
   "headers": [
@@ -335,7 +335,7 @@
       ]
     },
     {
-      "source": "/app.html",
+      "source": "/app",
       "headers": [
         {
           "key": "Content-Type",
