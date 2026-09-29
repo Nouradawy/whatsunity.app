@@ -2,74 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/api/markdown"
-    },
-    {
-      "source": "/index.html",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/api/markdown"
-    },
-    {
-      "source": "/privacy-policy.html",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/privacy_policy.md"
-    },
-    {
-      "source": "/terms-conditions.html",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/terms_conditions.md"
-    },
-    {
-      "source": "/whatsunity",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": ".*text/markdown.*"
-        }
-      ],
-      "destination": "/api/markdown"
-    },
-    {
-      "source": "/",
-      "destination": "/app"
-    },
-    {
-      "source": "/index.html",
-      "destination": "/app"
-    },
-    {
-      "source": "/whatsunity",
-      "destination": "/app"
-    },
-    {
-      "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
+      "source": "/(.*)",
       "has": [
         {
           "type": "header",
@@ -81,7 +14,7 @@
     },
     {
       "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
-      "destination": "/app"
+      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -293,10 +226,6 @@
         {
           "key": "Vary",
           "value": "Accept"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
         }
       ]
     },
@@ -327,19 +256,6 @@
         {
           "key": "x-markdown-tokens",
           "value": "720"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/app",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/html; charset=utf-8"
         },
         {
           "key": "Vary",
