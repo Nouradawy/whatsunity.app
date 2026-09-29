@@ -2,8 +2,74 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/whatsunity.md"
+    },
+    {
+      "source": "/index.html",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/whatsunity.md"
+    },
+    {
+      "source": "/privacy-policy.html",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/privacy_policy.md"
+    },
+    {
+      "source": "/terms-conditions.html",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/terms_conditions.md"
+    },
+    {
+      "source": "/whatsunity",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/whatsunity.md"
+    },
+    {
       "source": "/whatsunity",
       "destination": "/"
+    },
+    {
+      "source": "/((?!assets|whatsunity|.*\\..*).*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "(?<m>.*text/markdown.*)"
+        }
+      ],
+      "destination": "/whatsunity.md"
     },
     {
       "source": "/((?!assets|whatsunity|.*\\..*).*)",
@@ -11,6 +77,36 @@
     }
   ],
   "headers": [
+    {
+      "source": "/.well-known/api-catalog",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/linkset+json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/http-message-signatures-directory",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/http-message-signatures-directory+json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    },
     {
       "source": "/assets/(.*)",
       "headers": [
@@ -34,6 +130,66 @@
       ]
     },
     {
+      "source": "/whatsunity.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "2380"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/whatsunity-ar.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "2230"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/privacy_policy.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/terms_conditions.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -47,6 +203,14 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "Link",
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </whatsunity.md>; rel=\"service-doc\", </llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"service-desc\""
         }
       ]
     }

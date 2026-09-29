@@ -90,7 +90,7 @@ PART 4: CONTACT & REPOSITORY REFERENCES
 - WhatsUnity Landing: https://whatsunity.app
 - Technical Spec (EN): https://whatsunity.app.md
 - Technical Spec (AR): https://whatsunity.app-ar.md
-- Developer Email: noureldin.adawy@gmail.com
-- WhatsApp: +201099684812
+- Developer Email: nouradawy@whatsunity.app
+- WhatsApp: @nouradawy
 - GitHub: https://github.com/Nouradawy
 

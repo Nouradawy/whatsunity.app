@@ -1,0 +1,33 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://whatsunity.app/",
+      "service-desc": [
+        {
+          "href": "https://whatsunity.app/llms-full.txt",
+          "type": "text/plain",
+          "title": "WhatsUnity Technical Specification & Data Contracts"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://whatsunity.app/whatsunity.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Residential OS Architecture & Spec (English)"
+        },
+        {
+          "href": "https://whatsunity.app/whatsunity-ar.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Residential OS Architecture & Spec (Arabic)"
+        }
+      ],
+      "describedby": [
+        {
+          "href": "https://whatsunity.app/llms.txt",
+          "type": "text/plain",
+          "title": "WhatsUnity AI Agent Guidance"
+        }
+      ]
+    }
+  ]
+}

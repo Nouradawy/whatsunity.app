@@ -1,7 +1,7 @@
 ﻿# Noureldin Adawy (Nouradawy) — Founder & Lead Engineer | Full-Stack & Mobile Systems
 > Portfolio & Technical Index: https://www.nouradawy.tech/
 > WhatsUnity Compound OS: https://whatsunity.app
-> Contact: nouradawy@hotmail.com | WhatsApp: @nouradawy
+> Contact: nouradawy@whatsunity.app | WhatsApp: @nouradawy
 
 This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini, Claude, Cursor, Copilot) following the /llms.txt standard.
 

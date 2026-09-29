@@ -1,0 +1,84 @@
+; ==============================================================================
+; DNS for AI Discovery (DNS-AID) Zone File for whatsunity.app
+; Standard: draft-mozleywilliams-dnsop-dnsaid / RFC 9460 (SVCB & HTTPS RR)
+; ==============================================================================
+; Requirements:
+; 1. All records below must be published in the authoritative DNS zone.
+; 2. The discovery zone must be signed with DNSSEC (RFC 9364 / RFC 4033)
+;    so validating DoH resolvers return Authenticated Data (AD=true).
+; ==============================================================================
+
+$ORIGIN whatsunity.app.
+$TTL 3600
+
+; ------------------------------------------------------------------------------
+; 1. Organizational Agent Index (_index._agents)
+; The primary well-known entry point for discovering an organization's agents.
+; Returns service binding pointing to the root host where the API catalog and
+; agent documentation are published.
+; ------------------------------------------------------------------------------
+
+; ServiceMode SVCB (Type 64)
+_index._agents.whatsunity.app.    3600 IN SVCB  1 whatsunity.app. (
+    alpn="h2,h3"
+    port=443
+    mandatory=alpn,port
+    well-known="api-catalog"
+)
+
+; ServiceMode HTTPS (Type 65) - RFC 9460 HTTPS RR Form
+_index._agents.whatsunity.app.    3600 IN HTTPS 1 whatsunity.app. (
+    alpn="h2,h3"
+    port=443
+    mandatory=alpn,port
+    well-known="api-catalog"
+)
+
+; TXT Fallback for DNS providers lacking native SVCB/HTTPS editor support
+_index._agents.whatsunity.app.    3600 IN TXT   "v=dnsaid1; alpn=h2,h3; port=443; uri=https://whatsunity.app/.well-known/api-catalog"
+
+; ------------------------------------------------------------------------------
+; 2. Agent-to-Agent Protocol Entrypoint (_a2a._agents)
+; Advertises direct A2A communication support for autonomous agent negotiation.
+; ------------------------------------------------------------------------------
+
+; ServiceMode SVCB (Type 64)
+_a2a._agents.whatsunity.app.      3600 IN SVCB  1 whatsunity.app. (
+    alpn="a2a"
+    port=443
+    mandatory=alpn,port
+)
+
+; ServiceMode HTTPS (Type 65)
+_a2a._agents.whatsunity.app.      3600 IN HTTPS 1 whatsunity.app. (
+    alpn="a2a"
+    port=443
+    mandatory=alpn,port
+)
+
+; ------------------------------------------------------------------------------
+; 3. Model Context Protocol Entrypoint (_mcp._agents)
+; Advertises MCP server capabilities for AI coding agents and tool discovery.
+; ------------------------------------------------------------------------------
+
+; ServiceMode SVCB (Type 64)
+_mcp._agents.whatsunity.app.      3600 IN SVCB  1 whatsunity.app. (
+    alpn="mcp"
+    port=443
+    mandatory=alpn,port
+)
+
+; ServiceMode HTTPS (Type 65)
+_mcp._agents.whatsunity.app.      3600 IN HTTPS 1 whatsunity.app. (
+    alpn="mcp"
+    port=443
+    mandatory=alpn,port
+)
+
+; ------------------------------------------------------------------------------
+; 4. WWW Subdomain Aliases (for scanners checking www.whatsunity.app)
+; ------------------------------------------------------------------------------
+
+_index._agents.www.whatsunity.app. 3600 IN CNAME _index._agents.whatsunity.app.
+_a2a._agents.www.whatsunity.app.   3600 IN CNAME _a2a._agents.whatsunity.app.
+_mcp._agents.www.whatsunity.app.   3600 IN CNAME _mcp._agents.whatsunity.app.
