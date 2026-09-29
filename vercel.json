@@ -1,5 +1,4 @@
 {
-  "cleanUrls": true,
   "rewrites": [
     {
       "source": "/(.*)",
@@ -13,8 +12,16 @@
       "destination": "/api/markdown"
     },
     {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms-conditions",
+      "destination": "/terms-conditions.html"
+    },
+    {
       "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
-      "destination": "/index.html"
+      "destination": "/app.html"
     }
   ],
   "headers": [
@@ -205,10 +212,6 @@
         {
           "key": "Vary",
           "value": "Accept"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
         }
       ]
     },
@@ -256,6 +259,19 @@
         {
           "key": "x-markdown-tokens",
           "value": "720"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/app.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
         },
         {
           "key": "Vary",
