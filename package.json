@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && node scripts/prepare-vercel.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:dns": "node scripts/verify-dns-aid.js",
+    "scan": "node scripts/scan.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",
