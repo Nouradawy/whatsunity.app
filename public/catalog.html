@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsUnity — 34-Screen Production Feature Catalog | Complete Mobile OS Architecture</title>
+  <meta name="description" content="Explore all 34 production-grade mobile screens and workflows of WhatsUnity Residential Compound Operating System. 100% offline gatekeeping, dual-engine chat, 9-role maintenance, and governance." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#05070a" />
+
+  <!-- Canonical & Markdown Links for AI Agents -->
+  <link rel="canonical" href="https://whatsunity.app/catalog" />
+  <link rel="alternate" type="text/markdown" href="https://whatsunity.app/catalog.md" hreflang="en" title="WhatsUnity Screen Catalog (English)" />
+  <link rel="alternate" type="text/markdown" href="https://whatsunity.app/catalog-ar.md" hreflang="ar" title="WhatsUnity Screen Catalog (Arabic)" />
+  <link rel="alternate" href="https://whatsunity.app/llms.txt" />
+  <link rel="service-doc" type="text/markdown" href="/catalog.md" />
+
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="WhatsUnity Compound OS" />
+  <meta property="og:title" content="WhatsUnity — 34-Screen Production Feature Catalog" />
+  <meta property="og:description" content="Complete screen-by-screen architectural walkthrough of WhatsUnity across 6 operational roles." />
+  <meta property="og:image" content="https://whatsunity.app/assets/whatsunity/whatsunity-og.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Cairo:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #05070a;
+      --card-bg: rgba(10, 15, 25, 0.85);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --heading: #ffffff;
+      --primary: #3b82f6;
+      --primary-tint: rgba(59, 130, 246, 0.15);
+      --emerald: #10b981;
+      --emerald-tint: rgba(16, 185, 129, 0.15);
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-ar: 'Cairo', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Nav */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(5, 7, 10, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 0;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-badge {
+      background: var(--emerald-tint);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      transition: all 0.2s;
+    }
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: #2563eb;
+      border-color: #3b82f6;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    /* Hero */
+    .catalog-hero {
+      padding: 56px 0 36px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .hero-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .metric-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+    .metric-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #fff;
+      font-family: var(--font-mono);
+    }
+    .metric-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Role Nav Pills */
+    .role-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 36px 0;
+    }
+    .role-pill {
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .role-pill:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Screens Grid */
+    .screens-section {
+      margin-top: 20px;
+    }
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    .screen-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-col: column;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      overflow: hidden;
+    }
+    .screen-card:hover {
+      border-color: rgba(59, 130, 246, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .screen-id {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 800;
+      background: var(--primary-tint);
+      color: #60a5fa;
+      padding: 3px 8px;
+      border-radius: 8px;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .role-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+    }
+    .screen-eyebrow {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .card-title-en {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-top: 14px;
+      line-height: 1.3;
+    }
+    .card-title-ar {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #94a3b8;
+      font-family: var(--font-ar);
+      margin-top: 4px;
+    }
+    .card-persona {
+      font-size: 0.75rem;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-top: 6px;
+      display: inline-block;
+    }
+    .card-lede {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-top: 10px;
+      line-height: 1.55;
+    }
+
+    /* Mockup Frame */
+    .mockup-frame {
+      margin: 18px 0;
+      background: #000;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 480px;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    }
+    .mockup-frame img {
+      width: 100%;
+      height: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s;
+    }
+    .screen-card:hover .mockup-frame img {
+      transform: scale(1.02);
+    }
+
+    /* Feature bullets */
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+    .feature-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #60a5fa;
+      margin-top: 6px;
+      shrink: 0;
+    }
+    .feature-item strong {
+      color: #f1f5f9;
+    }
+    .feature-item span {
+      color: #94a3b8;
+    }
+
+    footer.site-footer {
+      margin-top: 60px;
+      border-top: 1px solid var(--card-border);
+      padding: 36px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .screens-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 1.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-title">
+        <a href="/" style="color:#fff; text-decoration:none;">WhatsUnity</a>
+        <span class="brand-badge">Production Screen Catalog</span>
+      </div>
+      <div class="nav-links">
+        <a href="/catalog.md" class="btn" target="_blank">📄 AI Markdown Spec</a>
+        <a href="/" class="btn btn-primary">🚀 Interactive Web App</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="catalog-hero">
+      <div class="hero-badge-row">
+        <span class="brand-badge">34 Screens Catalog</span>
+        <span class="brand-badge" style="background:rgba(59,130,246,0.15); color:#60a5fa; border-color:rgba(59,130,246,0.3);">100% Pre-rendered HTML</span>
+      </div>
+      <h1 class="hero-title">WhatsUnity 34-Screen Production Feature Catalog</h1>
+      <p class="hero-desc">
+        Complete visual and architectural inventory of all 34 production-ready Flutter screens across 6 operational personas. This page is 100% statically pre-rendered without client-side SPA requirements, allowing web scrapers, crawlers, and AI models to inspect all UI states, screenshots, and capabilities.
+      </p>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-num">34</div>
+          <div class="metric-label">Production Screens Implemented</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">6</div>
+          <div class="metric-label">Operational Personas</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">0ms</div>
+          <div class="metric-label">Offline SQLite UI Response</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">9</div>
+          <div class="metric-label">Facility Maintenance Trades</div>
+        </div>
+      </div>
+
+      <!-- Quick Role Anchor Links -->
+      <nav class="role-nav" aria-label="Role Navigation">
+        <a href="#section-community" class="role-pill">👥 Community Hub (Screens 01-07)</a>
+        <a href="#section-security" class="role-pill">🛡️ Security & Offline Gatekeeping (Screens 08-22)</a>
+        <a href="#section-maintenance" class="role-pill">🔧 Facility Maintenance & Engineering (Screens 23-28)</a>
+        <a href="#section-manager" class="role-pill">⚖️ Community Governance & Treasury (Screens 29-31)</a>
+        <a href="#section-subscription" class="role-pill">💎 Plans & Licensing (Screen 32)</a>
+        <a href="#section-admin" class="role-pill">⚙️ Admin Console & Broadcasts (Screens 33-34)</a>
+      </nav>
+    </section>
+
+    <!-- Screens Catalog -->
+    <section class="screens-section">
+      <div class="screens-grid">
+        
+        <article class="screen-card" id="screen-01">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 01</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Home · Social Feed</span>
+            </div>
+
+            <h2 class="card-title-en">Home Feed & Social Publishing</h2>
+            <div class="card-title-ar">الصفحة الرئيسية والمنشورات</div>
+            <div class="card-persona">👤 Resident / Homeowner / Household Member</div>
+            <p class="card-lede">The central hub for every resident — a dynamic social feed unifying compound announcements, user posts, and media, with rapid shortcuts to essential services.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/Home_screen_community.png" alt="Home Feed & Social Publishing Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Quick Service Shortcuts:</strong>
+                  <span>Instant access to maintenance, gate passes, housekeeping, and directory from top quick-actions.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Resident Post Creation:</strong>
+                  <span>Share community updates, announcements, or inquiries with neighbors in one tap.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Multi-Media Gallery:</strong>
+                  <span>Rich multi-photo carousel posts with swipe indicators and high-resolution viewing.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Role-Badged Engagement:</strong>
+                  <span>Likes, comments, and shares featuring verified role badges (e.g. 'Owner') for trust.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-02">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 02</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Feed States & Activation</span>
+            </div>
+
+            <h2 class="card-title-en">Social Feed — State Transitions</h2>
+            <div class="card-title-ar">الخلاصة الاجتماعية — الحالات</div>
+            <div class="card-persona">👤 Resident / First-Time Visitor</div>
+            <p class="card-lede">Thoughtful state handling: from welcoming empty states that drive first-time engagement to lively real-time community interaction.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/social.png" alt="Social Feed — State Transitions Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Real-Time Updates:</strong>
+                  <span>Instant streaming for fresh posts with a compelling call-to-action to join discussions.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Residents & Staff Privacy:</strong>
+                  <span>A verified closed perimeter ensuring all communications remain strictly within the compound.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Bilingual AR / EN:</strong>
+                  <span>Seamless language toggle and dark mode support with tailored typography for both scripts.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Effortless Refresh:</strong>
+                  <span>Prominent pull-to-refresh to fetch new content and live reactions instantly.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-03">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 03</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Community & Building Chat</span>
+            </div>
+
+            <h2 class="card-title-en">Community Messaging Channels</h2>
+            <div class="card-title-ar">الدردشة المجتمعية</div>
+            <div class="card-persona">👤 Resident / Compound Admin</div>
+            <p class="card-lede">Two focused messaging channels: compound-wide general chat and building-isolated groups. Supports rich media, documents, and voice notes—with dedicated interactive polls.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/chatting.png" alt="Community Messaging Channels Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Compound General Chat:</strong>
+                  <span>Unified real-time channel for all compound residents with verified role badges.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Private Building Group:</strong>
+                  <span>Exclusive, quiet group strictly for residents of the same building unit.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Rich Attachment Suite:</strong>
+                  <span>Instant camera snapshots, photo albums, PDF docs, and crystal-clear voice notes.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>In-Chat Interactive Polls:</strong>
+                  <span>Native live voting bubbles within chats with dedicated section access to prevent buried decisions.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-04">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 04</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Building Chat · Finance & Ledger</span>
+            </div>
+
+            <h2 class="card-title-en">Building Chat & Financial Hub</h2>
+            <div class="card-title-ar">شات العمارة والإدارة المالية</div>
+            <div class="card-persona">👤 Building Residents / Floor Treasurer</div>
+            <p class="card-lede">Building Chat is an integrated financial management hub: Net Building Balance display, real-time Cash In/Out ledger, co-funded development projects, and automated invoice billing.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/image-2.png" alt="Building Chat & Financial Hub Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Net Building Balance:</strong>
+                  <span>Live aggregated building treasury balance positioned prominently above chat.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Live Accounting Ledger:</strong>
+                  <span>Transparent real-time stream of all building collections and vendor expenditures.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Improvement Plans:</strong>
+                  <span>Collaboratively create building upgrade initiatives and crowd-fund improvements.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Automated Invoicing:</strong>
+                  <span>Issue dues, track paid/pending statuses, and automate fee collection reminders.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-05">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 05</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Community Governance & Voting</span>
+            </div>
+
+            <h2 class="card-title-en">Community Polls & Decision Hub</h2>
+            <div class="card-title-ar">التصويت المجتمعي</div>
+            <div class="card-persona">👤 Homeowners / Compound Management</div>
+            <p class="card-lede">From proposal to collective decision: admins create structured polls, set custom deadlines, and track live percentage outcomes alongside resident discussion.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/community_-_votting.png" alt="Community Polls & Decision Hub Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Flexible Question Builder:</strong>
+                  <span>Define poll questions with up to 10 distinct options, easily customizable.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Configurable Deadlines:</strong>
+                  <span>Set poll durations (1, 3, 7 days, or custom calendar date) for automated closing.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Live Percentage Breakdown:</strong>
+                  <span>Real-time percentage bars, voter participation counts, and active/closed badges.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Integrated Discussion Thread:</strong>
+                  <span>Contextual comment thread attached directly to the poll for healthy resident debate.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-06">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 06</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Resident Maintenance Triage</span>
+            </div>
+
+            <h2 class="card-title-en">Maintenance Reports & Ticketing</h2>
+            <div class="card-title-ar">تقارير وبلاغات الصيانة</div>
+            <div class="card-persona">👤 Resident / Front Desk</div>
+            <p class="card-lede">Flexible resident workflow from reporting to resolution: multi-tab status filters, color-coded reference codes, and instant photo/voice attachment upload.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/maintinace-reporting.png" alt="Maintenance Reports & Ticketing Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Status Filtering:</strong>
+                  <span>Filter tickets across All, New, In-Progress, and Resolved with live counts.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Color-Coded Cards:</strong>
+                  <span>Unique reference code (#MNT-XXXX), trade specialization tag, and timestamp.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Quick Report Creation:</strong>
+                  <span>Simplified submission wizard to capture photos, record audio, and explain issues.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Visual Trade Icons:</strong>
+                  <span>Clear visual trade icons (plumbing, electrical, HVAC) for immediate dispatch.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-07">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 07</span>
+              <span class="role-tag">Community Hub</span>
+              <span class="screen-eyebrow">Smart Building Directory</span>
+            </div>
+
+            <h2 class="card-title-en">Building Directory & Shared Contacts</h2>
+            <div class="card-title-ar">دليل العمارة والأرقام المشتركة</div>
+            <div class="card-persona">👤 Resident / Security Gate</div>
+            <p class="card-lede">Privacy-preserving building directory and shared numbers list: displays neighbors exclusively within your assigned building, with one-tap emergency calling.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/image-8.png" alt="Building Directory & Shared Contacts Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Building Neighbors Only:</strong>
+                  <span>Restricts listing strictly to residents of the user's assigned building unit.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Detailed Resident Cards:</strong>
+                  <span>Full name, apartment number, owner/tenant status, and avatar initial.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Emergency & Services:</strong>
+                  <span>Instant tabs for Neighbors, Gate Security, Maintenance Desk, and Emergency.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Direct One-Tap Dial:</strong>
+                  <span>Launch phone calls or chat directly from cards without manual phone saving.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-08">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 08</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Gate Security · Overstay Protocol</span>
+            </div>
+
+            <h2 class="card-title-en">Gatekeeper Overstayed Visitors Stream</h2>
+            <div class="card-title-ar">شاشة البوابة والزوار وتجاوز المدة</div>
+            <div class="card-persona">👤 Gate Security Guard (Gatekeeper)</div>
+            <p class="card-lede">The primary command screen for gate guards: high-contrast red alerts for couriers and visitors exceeding authorized duration, with instant unit query.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_overstayed_stream.png" alt="Gatekeeper Overstayed Visitors Stream Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Overstay Alert Telemetry:</strong>
+                  <span>Bright red highlight on overdue visitors with live elapsed countdown and 1-tap Resolve.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Instant Unit Lookup:</strong>
+                  <span>Type unit number (e.g. '34') to instantly retrieve host details and active passes.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Observation Flags:</strong>
+                  <span>Flags individuals placed on security watch with risk severity score indicators.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Resident Gate Directives:</strong>
+                  <span>Displays resident custom arrival rules (e.g. call host on arrival) with gate photos.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-09">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 09</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Host Verification & Directives</span>
+            </div>
+
+            <h2 class="card-title-en">Unit Directives & Host Resident Verification</h2>
+            <div class="card-title-ar">استعلام رقم الوحدة وتوجيهات الساكن</div>
+            <div class="card-persona">👤 Gatekeeper</div>
+            <p class="card-lede">Precision host verification ensuring arriving guests are cleared by verified unit owners with complete visitor logs and security instructions.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_unit_search_34.png" alt="Unit Directives & Host Resident Verification Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Verified Host Credentials:</strong>
+                  <span>Owner/tenant status, active residency verification, and verified phone line.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Historical Visit Log:</strong>
+                  <span>Past entry history of drivers and contractors previously cleared for this unit.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Custom Gate Directives:</strong>
+                  <span>Direct owner instructions (e.g. do not enter without phone confirmation).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Sub-50ms Entry Logging:</strong>
+                  <span>Log approved entrance in local SQLite database with 0ms UI blocking.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-10">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 10</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Courier Security Protocol</span>
+            </div>
+
+            <h2 class="card-title-en">Courier Protocol & Gate Directives</h2>
+            <div class="card-title-ar">التحقق من المندوبين وتوجيهات المالك</div>
+            <div class="card-persona">👤 Gatekeeper</div>
+            <p class="card-lede">Fast-track security protocol for commercial delivery couriers dropping verification time to under 3 seconds with automated 15-minute countdown limits.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_courier_verification.png" alt="Courier Protocol & Gate Directives Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Courier Fleet Selection:</strong>
+                  <span>1-tap identification for Amazon, Noon, Talabat, Mrsool, and custom couriers.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>License Plate Capture:</strong>
+                  <span>Dual Arabic/English license plate recording with alphanumeric shortcuts.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>15-Minute Countdown:</strong>
+                  <span>Automated countdown timer enforcing swift package drop-off turnaround.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Lobby Direct Navigation:</strong>
+                  <span>Directs courier to correct building entrance, parking stall, and freight elevator.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-11">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 11</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Offline QR Cryptography</span>
+            </div>
+
+            <h2 class="card-title-en">100% Offline Cryptographic QR Pass Validation</h2>
+            <div class="card-title-ar">مسح واعتماد تصاريح QR المشفرة أوفلاين</div>
+            <div class="card-persona">👤 Gatekeeper</div>
+            <p class="card-lede">Sub-50ms digital signature verification running entirely on guard tablets via local SQLite without internet connection during total network blackouts.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_pass_verification_qr.png" alt="100% Offline Cryptographic QR Pass Validation Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Sub-50ms Offline Verification:</strong>
+                  <span>Locally decrypts and verifies digital signature, unit ID, and expiration.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Integrated Host Alerts:</strong>
+                  <span>Flashes yellow banner with host resident instructions during the QR scan.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Preset Duration Limits:</strong>
+                  <span>One-click stay duration caps (15, 30, 45, 60 mins) for automatic overstay monitoring.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>ID Document Camera Capture:</strong>
+                  <span>Photographs front and back of national ID or driver license for high-security transit.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-12">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 12</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Pass Audit & Lifecycle</span>
+            </div>
+
+            <h2 class="card-title-en">Gate Pass Operations & Security Details</h2>
+            <div class="card-title-ar">تفاصيل التصريح والعمليات الأمنية</div>
+            <div class="card-persona">👤 Gatekeeper / Security Supervisor</div>
+            <p class="card-lede">Comprehensive audit details for any issued pass: visitor identity, entry/exit timestamps, approved extensions, and immediate revocation controls.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_pass_details_operations.png" alt="Gate Pass Operations & Security Details Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Visitor & Host Profiles:</strong>
+                  <span>Full name, national ID, destination unit, vehicle plate, and visit reason.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Precision Timestamps:</strong>
+                  <span>Millisecond-accurate log of pass creation, gate entry, and exit checkout.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Stay Extension Trail:</strong>
+                  <span>Audited log of additional hours approved by host or supervisor.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Revocation & Blacklist:</strong>
+                  <span>Instant 1-tap pass revocation with global blacklist flag across all gates.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-13">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 13</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Overstay Tactical Triage</span>
+            </div>
+
+            <h2 class="card-title-en">Overstay Protocol & Patrol Tactical Dispatch</h2>
+            <div class="card-title-ar">كشف تجاوز الزيارة وتوجيه الدورية</div>
+            <div class="card-persona">👤 Gatekeeper / Patrol Guard</div>
+            <p class="card-lede">Containment protocol for overstayed visitors: automatic delta timer, direct resident call inquiry, 2-hour grace extension, or patrol dispatch.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_patrol_dispatched.png" alt="Overstay Protocol & Patrol Tactical Dispatch Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Automatic Overstay Delta:</strong>
+                  <span>Continuous calculation between entry time and authorized cutoff hour.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Direct Host Call Inquiry:</strong>
+                  <span>1-tap phone dialer to host resident verifying if the visitor is still present.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>One-Click 2h Extension:</strong>
+                  <span>Extend stay limit by 2 hours upon host confirmation, resetting alerts.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Mobile Patrol Dispatch:</strong>
+                  <span>Directs field patrol guard to building location while opening a tactical chat room.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-14">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 14</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Security Threat Observation</span>
+            </div>
+
+            <h2 class="card-title-en">Threat Matrix & Security Observation Flags</h2>
+            <div class="card-title-ar">المراقبة الأمنية وبلاغات الطوارئ الفورية</div>
+            <div class="card-persona">👤 Security Guard / Command Supervisor</div>
+            <p class="card-lede">Proactive risk mitigation: activate surveillance flags on suspicious visitors across all gates with 10 standardized threat classifications and emergency SOS.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_pass_observation_modal.png" alt="Threat Matrix & Security Observation Flags Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Active Surveillance Flag:</strong>
+                  <span>Activates red observation badge synchronized to all guard mobile terminals.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>10 Threat Classifications:</strong>
+                  <span>Pre-set tags: loitering, attempted burglary, property damage, unregistered car.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>1-Tap Gate Alarms:</strong>
+                  <span>Floating SOS trigger for unauthorized gate breach or physical altercations.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Hardware Incident Log:</strong>
+                  <span>Log equipment faults for barriers, RFID scanners, or power outages.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-15">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 15</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Manual Intake Protocol</span>
+            </div>
+
+            <h2 class="card-title-en">Gatekeeper Manual Visitor Entry & Smart Lookup</h2>
+            <div class="card-title-ar">التسجيل اليدوي الشامل والبحث الذكي</div>
+            <div class="card-persona">👤 Gatekeeper</div>
+            <p class="card-lede">Flexible intake workflow for unscheduled visitors, emergency maintenance workers, or guests without smartphones, with automatic phone number retrieval.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_manual_entry.png" alt="Gatekeeper Manual Visitor Entry & Smart Lookup Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Phone-Based Auto-Fill:</strong>
+                  <span>Type visitor mobile number to instantly pull identity and past visit history.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Unit Direct Linking:</strong>
+                  <span>Assigns guest to exact building and apartment for permanent audit logs.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Bilingual Plate Recording:</strong>
+                  <span>Supports typing Arabic and English letters/numbers (e.g. ABC 1234 / أ ب ج ١٢٣٤).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Encrypted ID Archival:</strong>
+                  <span>Stores front and back ID photos directly in local encrypted database.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-16">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 16</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Guard Shift Telemetry</span>
+            </div>
+
+            <h2 class="card-title-en">Gate Guard Shift Portal & Duty Telemetry</h2>
+            <div class="card-title-ar">بوابة الحارس والورديات وسجل العمليات</div>
+            <div class="card-persona">👤 Gatekeeper</div>
+            <p class="card-lede">Shift management and post handover console: active duty stopwatch, gate assignment display, co-guard roster, and shift activity logbook.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_guard_shift_portal.png" alt="Gate Guard Shift Portal & Duty Telemetry Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Live Duty Stopwatch:</strong>
+                  <span>Shows ON DUTY badge, elapsed shift time, and assigned gatehouse post.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Co-Guard Roster:</strong>
+                  <span>List of fellow guards on duty during the same shift for fast coordination.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Shift Calendar & Leave:</strong>
+                  <span>Inspect upcoming duty calendar and submit shift exchange or leave requests.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Shift Activity Logbook:</strong>
+                  <span>Real-time logbook recording all entries, incidents, and guard notes during shift.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-17">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 17</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Incident Triage & Alarm</span>
+            </div>
+
+            <h2 class="card-title-en">Security Incident Dispatch & Alarm Room</h2>
+            <div class="card-title-ar">فتح بلاغ أمني وتوجيه الدورية</div>
+            <div class="card-persona">👤 Gatekeeper / Security Supervisor</div>
+            <p class="card-lede">Rapid emergency incident console: geo-tag incidents to gates or sectors, capture watermarked photos, assign L1/L2/L3 severity, and dispatch nearest patrol.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_incident_dispatch_modal.png" alt="Security Incident Dispatch & Alarm Room Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Geo-Located Sector Tag:</strong>
+                  <span>Links incident to building sector, gatehouse, or shared facility coordinates.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Watermarked Photo Proof:</strong>
+                  <span>Captures on-scene photo stamped with timestamp, gate number, and user ID.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Severity Tiers (L1-L3):</strong>
+                  <span>Classify incidents as Critical Emergency (L1), High (L2), or Normal (L3).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Instant Patrol Assignment:</strong>
+                  <span>Pushes route guidance and tactical alarm to nearest roaming guard.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-18">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 18</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Historical Access Audit</span>
+            </div>
+
+            <h2 class="card-title-en">Gate Activity Logbook & Access Audit Trail</h2>
+            <div class="card-title-ar">سجل النشاط وحركات الدخول والخروج</div>
+            <div class="card-persona">👤 Security Supervisor / Auditor</div>
+            <p class="card-lede">Tamper-evident chronological audit ledger tracking pedestrian and vehicular movements through all gates with millisecond accuracy and encrypted export.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/gatekeeper_activity_logbook.png" alt="Gate Activity Logbook & Access Audit Trail Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Millisecond Timestamping:</strong>
+                  <span>Chronological ledger recording exact entry and exit times for every transit.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Multi-Parametric Filter:</strong>
+                  <span>Search by vehicle plate, visitor name, unit apartment, or gate station.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Daily Traffic Telemetry:</strong>
+                  <span>Aggregated counters for total entries, unique visitors, and regular contractors.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Encrypted CSV Export:</strong>
+                  <span>Export verified logs for police reporting or compound administrative audit.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-19">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 19</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Field Patrol Command</span>
+            </div>
+
+            <h2 class="card-title-en">Mobile Patrol Guard Portal & Checkpoint Stream</h2>
+            <div class="card-title-ar">مركز عمليات الدورية ونقاط التفتيش</div>
+            <div class="card-persona">👤 Mobile Patrol Guard (Walking / Vehicle)</div>
+            <p class="card-lede">Dedicated field portal for mobile guards: nearby checkpoint targets, inspection round progress bar, floating SOS panic button, and shift management.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/patrol_Home (1).png" alt="Mobile Patrol Guard Portal & Checkpoint Stream Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Nearby Checkpoint Targets:</strong>
+                  <span>Lists upcoming inspection points (Park 10, Park 30, Park 29) with round progress %.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Floating SOS Panic Button:</strong>
+                  <span>Red button triggering instant silent alarm to Central Command with GPS location.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Duty Calendar & Requests:</strong>
+                  <span>View assigned patrol sector and submit approved rest interval requests.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>On-Duty Patrol Roster:</strong>
+                  <span>Visibility into fellow roaming guards deployed across compound sectors.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-20">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 20</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">NFC Guard Telemetry</span>
+            </div>
+
+            <h2 class="card-title-en">NFC Checkpoint Telemetry & Patrol Verification</h2>
+            <div class="card-title-ar">مسح نقاط التفتيش الذكية ومسار الدورية</div>
+            <div class="card-persona">👤 Mobile Patrol Guard</div>
+            <p class="card-lede">Contactless NFC/QR verification proving physical presence at perimeter inspection points: tamper-proof offline timestamping and overdue scan alerts.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/patrol hub ar (4).png" alt="NFC Checkpoint Telemetry & Patrol Verification Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Contactless NFC Scanning:</strong>
+                  <span>Tap encrypted physical NFC tags installed along perimeter fences and utility rooms.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Offline Telemetry Logging:</strong>
+                  <span>Records checkpoint arrival in local SQLite with cryptographic tamper-proofing.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Overdue Inspection Alarms:</strong>
+                  <span>Flashes red warning to supervisor if guard misses a scheduled inspection window.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Route Completion Dial:</strong>
+                  <span>Live completion meter tracking percentage of perimeter checkpoints validated.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-21">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 21</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Forensic Evidence Logging</span>
+            </div>
+
+            <h2 class="card-title-en">Security Incident Evidence Logging & Forensic Watermarking</h2>
+            <div class="card-title-ar">الاستجابة للبلاغات وغرفة التوجيه التكتيكي</div>
+            <div class="card-persona">👤 Patrol Guard / Supervisor</div>
+            <p class="card-lede">Forensic documentation of security violations: capture photos with embedded cryptographic RTL watermark, record audio memos, and tag involved parties.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/patrol report ar expanded.png" alt="Security Incident Evidence Logging & Forensic Watermarking Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Forensic Photo Capture:</strong>
+                  <span>Photos stamped with indelible cryptographic RTL watermark (date, time, GPS, user).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Audio Narrative Recording:</strong>
+                  <span>Record on-the-spot voice memos detailing incident circumstances.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Involved Parties Profiling:</strong>
+                  <span>Link incidents to specific individuals, license plates, or apartment numbers.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Auto Cloud Re-Sync:</strong>
+                  <span>Queues report locally and uploads high-resolution media upon re-establishing network.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-22">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 22</span>
+              <span class="role-tag">Security Operations</span>
+              <span class="screen-eyebrow">Lost & Found Property Ledger</span>
+            </div>
+
+            <h2 class="card-title-en">Lost & Found RTL Watermarking & Cataloging</h2>
+            <div class="card-title-ar">تقارير الأمن والمفقودات</div>
+            <div class="card-persona">👤 Security Staff / Community Front Desk</div>
+            <p class="card-lede">Compound property registry preventing theft and false claims: dual lost vs found ledger, automated RTL watermark overlay, and resident claim notifications.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/image-6.png" alt="Lost & Found RTL Watermarking & Cataloging Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Lost vs Found Ledger:</strong>
+                  <span>Clear two-sided ledger categorizing lost inquiries against secured recovered items.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Automated RTL Watermark:</strong>
+                  <span>Overlays compound logo, report ID, date, and location onto item photos.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Status Lifecycle Tracking:</strong>
+                  <span>Track item lifecycle (Found, Claimed, Returned) with formal sign-off.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Automated Resident Match:</strong>
+                  <span>Matches item tags against resident reports and pushes match notifications.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-23">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 23</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Maintenance Ticket Triage</span>
+            </div>
+
+            <h2 class="card-title-en">Maintenance Desk & Ticket Triage (9 Trades)</h2>
+            <div class="card-title-ar">مركز استقبال البلاغات وتعيين الفنيين</div>
+            <div class="card-persona">👤 Maintenance Coordinator</div>
+            <p class="card-lede">Central triage desk for resident repair tickets: rapid categorization across 9 trade specializations, 1-click technician dispatch, and emergency escalation.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/maintenance_coordinator_triage_desk.png" alt="Maintenance Desk & Ticket Triage (9 Trades) Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>9-Trade Specialization Triage:</strong>
+                  <span>Categorize across Plumbing, Electrical, HVAC, Carpentry, Painting, Masonry, Elevators, Landscaping, Pest.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>1-Click Technician Assignment:</strong>
+                  <span>Direct dispatch to on-duty technicians based on real-time workload capacity.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Emergency Ticket Escalation:</strong>
+                  <span>Flashing red alert to Chief Engineer for catastrophic pipe bursts or power loss.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Unique #MNT Tracking Codes:</strong>
+                  <span>Auto-generates traceable tracking numbers for parts requisitions and labor accounting.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-24">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 24</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Work Orders & Warehouse</span>
+            </div>
+
+            <h2 class="card-title-en">Work Orders & Spare Parts Console</h2>
+            <div class="card-title-ar">أوامر العمل الميدانية ومتابعة قطع الغيار</div>
+            <div class="card-persona">👤 Maintenance Coordinator / Workshop Lead</div>
+            <p class="card-lede">Work order management and warehouse spare parts accounting: track field repair costs, requisitions, technician rerouting, and QA sign-offs.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/maintenance_coordinator_work_orders.png" alt="Work Orders & Spare Parts Console Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Active Work Order Board:</strong>
+                  <span>Track active jobs, estimated labor costs, and priority bands (Normal, Medium, Critical).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Spare Parts Requisitions:</strong>
+                  <span>Dedicated ledger linking warehouse parts, costs, and inventory directly to tickets.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Technician Rerouting:</strong>
+                  <span>Reassign tickets to backup specialists if the primary technician is overloaded.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Completion Sign-Off:</strong>
+                  <span>Review repair photos and supervisor checklist prior to final ticket closure.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-25">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 25</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Technician Field Action</span>
+            </div>
+
+            <h2 class="card-title-en">Field Technician Active Stopwatch & Repairs</h2>
+            <div class="card-title-ar">تطبيق الفني الميداني وإجراءات التنفيذ</div>
+            <div class="card-persona">👤 Field Technician (Plumber, Electrician, HVAC)</div>
+            <p class="card-lede">On-site mobile execution console for field technicians: exact unit geolocation, live repair stopwatch timer, spare parts requisition, and mandatory Before/After photo proof.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/technician_portal_assigned_orders.png" alt="Field Technician Active Stopwatch & Repairs Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Unit Geolocation & Defect:</strong>
+                  <span>Exact unit address (e.g. Bldg 34, Apt 2) with full resident voice/photo defect context.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Active Stopwatch Timer:</strong>
+                  <span>Live stopwatch timer calculating on-site labor time and turnaround efficiency.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Quick Field Actions:</strong>
+                  <span>Actions: [Start on Site], [Request Parts], [Add Update], [Reroute Job].</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Mandatory Before / After Photos:</strong>
+                  <span>Requires photo evidence of defective condition before repair and finished quality after.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-26">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 26</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Chief Engineer Command</span>
+            </div>
+
+            <h2 class="card-title-en">Chief Engineer Operational Takeover & Broadcasts</h2>
+            <div class="card-title-ar">بوابة كبير المهندسين والتدخل المباشر</div>
+            <div class="card-persona">👤 Chief Engineer / Facility Director</div>
+            <p class="card-lede">High-level supervisory console providing direct operational failover when coordinators are absent, engineering broadcast publisher, and KPI telemetry.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/chief_engineer_portal_takeover.png" alt="Chief Engineer Operational Takeover & Broadcasts Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Coordinator Failover Takeover:</strong>
+                  <span>Automatic banner enabling Chief Engineer to dispatch tickets during coordinator absence.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Engineering Broadcast Notices:</strong>
+                  <span>Pre-set templates to notify residents of power outages, water cuts, or elevator maintenance.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Master Incident Ledger:</strong>
+                  <span>Advanced filtering of severe infrastructure breakdowns across all compound sectors.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Facility Pressure Telemetry:</strong>
+                  <span>KPI telemetry ribbons tracking open tickets, average resolution speed, and CSAT scores.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-27">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 27</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Workforce Load Balancing</span>
+            </div>
+
+            <h2 class="card-title-en">Workforce Capacity & Dispatch Balancing</h2>
+            <div class="card-title-ar">إصدار أوامر العمل وإدارة الطاقة الاستيعابية</div>
+            <div class="card-persona">👤 Chief Engineer / Coordinator</div>
+            <p class="card-lede">Dynamic workforce balancing preventing technician burnout: live capacity meters (e.g. 1/6 Cap), trade certifications, and priority coding.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/chief_engineer_dispatch_modal_work_order.png" alt="Workforce Capacity & Dispatch Balancing Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Work Order Dispatch Form:</strong>
+                  <span>Form combining trade selection, priority severity, technician picker, and labor hours.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Live Capacity Meters:</strong>
+                  <span>Visual load gauge (e.g. 1/6 Cap Available vs 5/6 Cap Overloaded) for fair dispatch.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Trade Certification Records:</strong>
+                  <span>Inspect technician verified certifications and authorized heavy equipment permits.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Strict Severity Coding:</strong>
+                  <span>Classify jobs into Normal, Medium, High, or Critical Emergency bands.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-28">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 28</span>
+              <span class="role-tag">Facility Engineering</span>
+              <span class="screen-eyebrow">Facility Shift Scheduling</span>
+            </div>
+
+            <h2 class="card-title-en">Duty Schedules & Holiday Calendars (24/7 Readiness)</h2>
+            <div class="card-title-ar">جداول التغطية وتقويم العطلات الرسمية</div>
+            <div class="card-persona">👤 Chief Engineer / Operations Manager</div>
+            <p class="card-lede">Workforce shift scheduling and coverage planning ensuring 24/7 facility emergency readiness, preventive maintenance windows, and holiday rotations.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/chief_engineer_schedules_holidays_calendar.png" alt="Duty Schedules & Holiday Calendars (24/7 Readiness) Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Approved Coverage Quotas:</strong>
+                  <span>Visual field shift distribution guaranteeing minimum staffing quotas (e.g. 5/7 active days).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Interactive Holiday Heatmap:</strong>
+                  <span>Monthly calendar classifying workdays, public holidays, and on-call rotations.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Preventive Overhaul Windows:</strong>
+                  <span>Schedules major equipment maintenance (pumps, generators, elevators) during low usage.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>24/7 Emergency Rotation:</strong>
+                  <span>Dedicated on-call rosters ensuring immediate response to midnight pipe leaks or outages.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-29">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 29</span>
+              <span class="role-tag">Community Governance</span>
+              <span class="screen-eyebrow">Manager Executive Hub</span>
+            </div>
+
+            <h2 class="card-title-en">Community Manager Operations & SOS Alert Feed</h2>
+            <div class="card-title-ar">بوابة مدير المجمع والعمليات وبلاغات SOS</div>
+            <div class="card-persona">👤 Community Manager / Executive Director</div>
+            <p class="card-lede">Executive operations command overview: daily gate passes, security personnel attendance, live SOS alerts, L1 high-priority incident triage, and service shortcuts.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/manager_portal_home.png" alt="Community Manager Operations & SOS Alert Feed Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Daily Operations Snapshot:</strong>
+                  <span>Real-time counters for guest passes, guard attendance, open tickets, and sync uptime.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Active SOS Emergency Banner:</strong>
+                  <span>High-contrast red banner alerting management to critical security breaches or overstays.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>L1 Priority Incident Triage:</strong>
+                  <span>Centralized feed of critical incidents segmented across compound buildings and sectors.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Executive Quick Actions:</strong>
+                  <span>Rapid shortcuts for Gate Access Administration, Maintenance Budgets, and Emergency Broadcasts.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-30">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 30</span>
+              <span class="role-tag">Community Governance</span>
+              <span class="screen-eyebrow">Community Rules & Sanctions</span>
+            </div>
+
+            <h2 class="card-title-en">Governance: Penalties, Sanctions & Standard Tariff List</h2>
+            <div class="card-title-ar">الحوكمة — لائحة المخالفات والغرامات وقائمة الأسعار</div>
+            <div class="card-persona">👤 Community Manager / Legal Affairs</div>
+            <p class="card-lede">Community rule enforcement and standardized penalty tariff: violation ledger, approved sanction price list ($150 parking, $200 noise), and compliance tracking.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/manager_governance_fines_penalties.png" alt="Governance: Penalties, Sanctions & Standard Tariff List Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Violation & Receivables Log:</strong>
+                  <span>Tracks penalty collections across status (Pending, Disputed, Paid).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Standardized Sanction Tariff:</strong>
+                  <span>Official rates: Parking $150.00, Noise $200.00, Littering $75.00, Alterations $500.00.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Issue Penalty Workflows:</strong>
+                  <span>Issue formal violation notices with photographic evidence and payment due dates.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Compound Compliance Dial:</strong>
+                  <span>Green compliance dial tracking resident adherence and zero-delinquency targets.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-31">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 31</span>
+              <span class="role-tag">Community Governance</span>
+              <span class="screen-eyebrow">Reserve Fund Treasury</span>
+            </div>
+
+            <h2 class="card-title-en">Governance: Treasury & Reserve Fund Accounting</h2>
+            <div class="card-title-ar">الحوكمة — الخزينة وميزانية ووديعة الصيانة</div>
+            <div class="card-persona">👤 Board of Directors / Financial Comptroller</div>
+            <p class="card-lede">Transparent financial governance for long-term compound maintenance reserve funds: aggregated balances, banking yield telemetry, and audited ledgers.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/manager_governance_treasury_fund.png" alt="Governance: Treasury & Reserve Fund Accounting Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Central Reserve Fund Balance:</strong>
+                  <span>Consolidated ledger aggregating initial deposits, banking yields, and capital expenses.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Banking Yield Telemetry:</strong>
+                  <span>Precision tracking of annual bank interest yields and operational draws.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Capital Expense Allocation:</strong>
+                  <span>Allocate funds for future major infrastructure overhauls (roads, facades, elevators).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Audited Ledger Sync:</strong>
+                  <span>Immutable transaction ledger synchronized in real-time to preserve homeowner trust.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-32">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 32</span>
+              <span class="role-tag">Plans & Editions</span>
+              <span class="screen-eyebrow">Plans, Pricing & Sandbox</span>
+            </div>
+
+            <h2 class="card-title-en">Editions: Free vs Premium & Interactive Sandbox</h2>
+            <div class="card-title-ar">إدارة الاشتراكات والنسخ المتاحة</div>
+            <div class="card-persona">👤 Compound Owner / HOA Board President</div>
+            <p class="card-lede">Flexible licensing editions scaling from zero-cost Telegram community tier to complete enterprise compound operating system with an interactive sandbox.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/profile_subscription.png" alt="Editions: Free vs Premium & Interactive Sandbox Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Free Telegram Community Edition:</strong>
+                  <span>Community chat, directory, and basic tickets routed through zero-cost Telegram MTProto bots.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Premium Compound OS:</strong>
+                  <span>Full activation of RBC security, 100% offline QR gatekeeping, patrols, and ledgers.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Interactive Demo Sandbox:</strong>
+                  <span>Test gate scanning, patrol rounds, and technician timers using pre-loaded mock data.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Cross-Platform Availability:</strong>
+                  <span>Available on Google Play, Progressive Web App (PWA), and Apple iOS roadmap.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-33">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 33</span>
+              <span class="role-tag">Admin Console</span>
+              <span class="screen-eyebrow">Admin Verification & KYC</span>
+            </div>
+
+            <h2 class="card-title-en">Member Verification & Access Control (KYC)</h2>
+            <div class="card-title-ar">التحقق من الأعضاء وإدارة الصلاحيات</div>
+            <div class="card-persona">👤 Super Administrator / Compound Registrar</div>
+            <p class="card-lede">User lifecycle governance and unit ownership verification: review incoming join requests, delegate permissions, enforce chat mutes, or ban accounts.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/admin_members_verification.png" alt="Member Verification & Access Control (KYC) Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Pending Request Review:</strong>
+                  <span>Examine join requests with proof of ownership or tenancy lease documents in 1-tap.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Role & Permission Delegation:</strong>
+                  <span>Assign roles (Owner, Tenant, Family, Gatekeeper, Technician, Coordinator, Admin).</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Disciplinary Moderation:</strong>
+                  <span>Granular penalties: Chat Mute (prevent spam while keeping security alerts) or Account Ban.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Direct Contact Dispatch:</strong>
+                  <span>1-tap phone call, WhatsApp verification message, or SMS OTP resend.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+        <article class="screen-card" id="screen-34">
+          <div>
+            <div class="card-top">
+              <span class="screen-id">Screen 34</span>
+              <span class="role-tag">Admin Console</span>
+              <span class="screen-eyebrow">Admin · Broadcast Publisher</span>
+            </div>
+
+            <h2 class="card-title-en">Tactical Broadcast Publisher & Emergency Alerts</h2>
+            <div class="card-title-ar">إرسال التعميمات والإعلانات التكتيكية</div>
+            <div class="card-persona">👤 Super Administrator / Operations Command</div>
+            <p class="card-lede">High-priority broadcasting console: publish instant announcements targeted to residents or security guards, with tactical presets and priority routing.</p>
+
+            <!-- Pre-rendered Phone Mockup Image -->
+            <div class="mockup-frame">
+              <img src="/assets/projects/Whatsunity/catalog/admin_broadcast_publisher.png" alt="Tactical Broadcast Publisher & Emergency Alerts Screen Mockup" loading="lazy" />
+            </div>
+
+            <!-- Features List -->
+            <ul class="features-list">
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Tactical Quick-Presets:</strong>
+                  <span>One-tap presets for recurring events: Gate Congestion, Active Night Patrol, ID Checks.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Multi-Level Alert Priority:</strong>
+                  <span>Classify broadcasts as Notice, Warning, or Critical Emergency with distinct alert sounds.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Audience Segmentation:</strong>
+                  <span>Target broadcasts precisely to the entire Community or strictly to Guard personnel.</span>
+                </div>
+              </li>
+              
+              <li class="feature-item">
+                <span class="feature-dot"></span>
+                <div>
+                  <strong>Instant Push Delivery:</strong>
+                  <span>Push notifications dispatched instantly to resident phones and guard station tablets.</span>
+                </div>
+              </li>
+              
+            </ul>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>WhatsUnity Compound Operating System · One Home. One Subscription. Your Entire Household Included.</p>
+      <p style="margin-top:6px; font-size:0.75rem;">Engineered by Noureldin Adawy · Flutter Dart 3, SQLite Local Master, Appwrite Cloud, Telegram MTProto</p>
+      <p style="margin-top:10px;">
+        <a href="https://whatsunity.app/">Live Web App</a> · 
+        <a href="/catalog.md">Raw Markdown Spec</a> · 
+        <a href="/whatsunity.md">System Architecture</a> · 
+        <a href="/llms.txt">LLMs Index</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

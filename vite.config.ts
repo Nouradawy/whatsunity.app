@@ -72,7 +72,18 @@ const agentDiscoveryAndNegotiationPlugin = () => {
       }
     }
 
-    // 3. Fallback for preview mode if index.html was moved to app.html
+    // 3. Static standalone catalog route
+    if (pathname === "/catalog" || pathname === "/catalog.html") {
+      const catalogHtmlPath = path.resolve(__dirname, "public", "catalog.html");
+      if (fs.existsSync(catalogHtmlPath)) {
+        res.setHeader("Content-Type", "text/html; charset=utf-8");
+        res.setHeader("Vary", "Accept");
+        res.end(fs.readFileSync(catalogHtmlPath, "utf-8"));
+        return;
+      }
+    }
+
+    // 4. Fallback for preview mode if index.html was moved to app.html
     if (pathname === "/" || pathname === "/index.html") {
       const distIndex = path.resolve(__dirname, "dist", "index.html");
       const distApp = path.resolve(__dirname, "dist", "app.html");

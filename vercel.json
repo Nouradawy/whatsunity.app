@@ -20,6 +20,10 @@
       "destination": "/terms-conditions.html"
     },
     {
+      "source": "/catalog",
+      "destination": "/catalog.html"
+    },
+    {
       "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
       "destination": "/app.html"
     }
