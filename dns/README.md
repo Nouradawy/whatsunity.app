@@ -29,9 +29,11 @@ The complete zone file is available at [`dns-aid.zone`](./dns-aid.zone).
 | `_a2a._agents.whatsunity.app` | **HTTPS** | `1` | `whatsunity.app.` | `alpn="a2a" port=443 mandatory=alpn,port` |
 | `_mcp._agents.whatsunity.app` | **SVCB** | `1` | `whatsunity.app.` | `alpn="mcp" port=443 mandatory=alpn,port` |
 | `_mcp._agents.whatsunity.app` | **HTTPS** | `1` | `whatsunity.app.` | `alpn="mcp" port=443 mandatory=alpn,port` |
+| `_catalog._agents.whatsunity.app` | **TXT** | - | - | `"url=https://whatsunity.app/.well-known/ai-catalog.json"` |
 | `_index._agents.www.whatsunity.app` | **CNAME** | - | `_index._agents.whatsunity.app.` | - |
 | `_a2a._agents.www.whatsunity.app` | **CNAME** | - | `_a2a._agents.whatsunity.app.` | - |
 | `_mcp._agents.www.whatsunity.app` | **CNAME** | - | `_mcp._agents.whatsunity.app.` | - |
+| `_catalog._agents.www.whatsunity.app` | **CNAME** | - | `_catalog._agents.whatsunity.app.` | - |
 
 ---
 
