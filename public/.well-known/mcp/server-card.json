@@ -1,0 +1,76 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "whatsunity-compound-os",
+    "version": "1.0.0",
+    "description": "Model Context Protocol Server for WhatsUnity Compound OS — Tools for cryptographic offline QR gate pass verification, maintenance ticket lifecycle inspection across 9 operational trades, and community operations telemetry."
+  },
+  "endpoint": "https://whatsunity.app/mcp",
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "resources": {
+      "subscribe": false,
+      "listChanged": false
+    },
+    "prompts": {
+      "listChanged": false
+    }
+  },
+  "tools": [
+    {
+      "name": "verify_gate_pass",
+      "description": "Cryptographically verify a residential or visitor QR gate pass in sub-50ms offline mode or online sync mode.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "passCode": {
+            "type": "string",
+            "description": "Cryptographically signed visitor or resident QR pass payload."
+          }
+        },
+        "required": [
+          "passCode"
+        ]
+      }
+    },
+    {
+      "name": "query_community_status",
+      "description": "Retrieve live community operational metrics, gate connectivity status, and maintenance volume.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "compoundId": {
+            "type": "string",
+            "description": "Unique identifier of the residential compound (defaults to public showcase)."
+          }
+        }
+      }
+    },
+    {
+      "name": "list_maintenance_trades",
+      "description": "List the 9 maintenance trade specializations (Plumbing, Electrical, HVAC, Carpentry, Painting, Masonry, Elevators, Landscaping, Pest Control) and on-duty technician rosters.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "search_compound_directory",
+      "description": "Search verified resident public directory and emergency contacts within the compound.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search keyword or unit code."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ]
+}

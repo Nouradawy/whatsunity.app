@@ -2,12 +2,19 @@
 # https://whatsunity.app/
 
 User-agent: *
+# Content Signals (IETF draft-romm-aipref-contentsignals / contentsignals.org)
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+# ARD Manifest Discovery (Agentic Resource Discovery §6.1)
+Agentmap: https://whatsunity.app/.well-known/ai-catalog.json
+
 Allow: /
 Allow: /whatsunity
 Allow: /whatsunity.md
 Allow: /whatsunity-ar.md
 Allow: /llms.txt
 Allow: /llms-full.txt
+Allow: /auth.md
 Allow: /.well-known/
 Allow: /assets/
 Allow: /assets/whatsunity/
@@ -56,4 +63,3 @@ Allow: /
 
 # WhatsUnity Dedicated XML Sitemap
 Sitemap: https://whatsunity.app/sitemap.xml
-

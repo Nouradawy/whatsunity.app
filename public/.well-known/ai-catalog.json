@@ -1,0 +1,64 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "WhatsUnity Compound Operating System",
+    "identifier": "did:web:whatsunity.app"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:whatsunity.app:mcp:server-card",
+      "displayName": "WhatsUnity Model Context Protocol Server",
+      "type": "application/mcp-server-card+json",
+      "url": "https://whatsunity.app/.well-known/mcp/server-card.json",
+      "representativeQueries": [
+        "verify whatsunity gate pass offline",
+        "whatsunity compound maintenance workflow tools",
+        "interact with residential community operations"
+      ]
+    },
+    {
+      "identifier": "urn:air:whatsunity.app:agent:a2a-card",
+      "displayName": "WhatsUnity Autonomous A2A Gateway",
+      "type": "application/json",
+      "url": "https://whatsunity.app/.well-known/agent-card.json",
+      "representativeQueries": [
+        "autonomous visitor pass issuance",
+        "agent to agent residential community access",
+        "dispatch maintenance work orders automatically"
+      ]
+    },
+    {
+      "identifier": "urn:air:whatsunity.app:doc:system-spec",
+      "displayName": "WhatsUnity Architecture & LLM Context",
+      "type": "text/markdown",
+      "url": "https://whatsunity.app/whatsunity.md",
+      "representativeQueries": [
+        "whatsunity offline first sqlite local master architecture",
+        "one home one subscription licensing model",
+        "clean architecture in dart 3 with zero code generation"
+      ]
+    },
+    {
+      "identifier": "urn:air:whatsunity.app:skill:agentic",
+      "displayName": "Agentic Web Engineering & Discovery Skill",
+      "type": "text/markdown",
+      "url": "https://whatsunity.app/.well-known/agent-skills/agentic/SKILL.md",
+      "representativeQueries": [
+        "agentic discovery standards implementation",
+        "dns aid and web bot auth runbook",
+        "how to make a website agent ready"
+      ]
+    },
+    {
+      "identifier": "urn:air:whatsunity.app:api:catalog",
+      "displayName": "RFC 9727 Machine-Readable API Catalog",
+      "type": "application/linkset+json",
+      "url": "https://whatsunity.app/.well-known/api-catalog",
+      "representativeQueries": [
+        "whatsunity machine readable api endpoints",
+        "rfc 9727 linkset api catalog for whatsunity",
+        "discover residential compound management apis"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { LazyMotion, domAnimation } from "framer-motion";
 import { ThemeProvider } from "./theme/ThemeProvider";
+import "./utils/webmcp";
 import App from "./App";
 import "./index.css";
 

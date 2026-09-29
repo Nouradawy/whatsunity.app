@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "agentic",
+      "type": "skill-md",
+      "description": "Build, audit, and update AI Agent-Ready web interfaces and APIs. Covers RFC 8288, RFC 9727, Markdown negotiation, DNS-AID, Web Bot Auth, WebMCP, ARD, and Auth.md.",
+      "url": "https://whatsunity.app/.well-known/agent-skills/agentic/SKILL.md",
+      "digest": "sha256:1b6e102f5e009f96447de76c040cdb25352da79a03ebd9b52e7bdf935ee2436b"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "WhatsUnity Autonomous Gateway Agent",
+  "description": "Autonomous Agent-to-Agent coordinator for residential compound visitor access, maintenance dispatch across 9 trades, and resident directory discovery.",
+  "url": "https://whatsunity.app",
+  "version": "1.0.0",
+  "protocols": [
+    "a2a",
+    "mcp"
+  ],
+  "capabilities": {
+    "streaming": true,
+    "bidirectional": true
+  },
+  "endpoints": {
+    "a2a": "https://whatsunity.app/a2a",
+    "mcp": "https://whatsunity.app/mcp"
+  },
+  "authentication": {
+    "type": "oauth2",
+    "discovery": "https://whatsunity.app/.well-known/oauth-authorization-server",
+    "scopes": [
+      "compounds:read",
+      "gates:verify",
+      "tickets:manage",
+      "agents:communicate"
+    ]
+  },
+  "documentation": "https://whatsunity.app/whatsunity.md"
+}

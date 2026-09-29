@@ -7,10 +7,10 @@
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
-      "destination": "/whatsunity.md"
+      "destination": "/api/markdown"
     },
     {
       "source": "/index.html",
@@ -18,10 +18,10 @@
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
-      "destination": "/whatsunity.md"
+      "destination": "/api/markdown"
     },
     {
       "source": "/privacy-policy.html",
@@ -29,7 +29,7 @@
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
       "destination": "/privacy_policy.md"
@@ -40,7 +40,7 @@
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
       "destination": "/terms_conditions.md"
@@ -51,29 +51,37 @@
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
-      "destination": "/whatsunity.md"
+      "destination": "/api/markdown"
+    },
+    {
+      "source": "/",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/app.html"
     },
     {
       "source": "/whatsunity",
-      "destination": "/"
+      "destination": "/app.html"
     },
     {
-      "source": "/((?!assets|whatsunity|.*\\..*).*)",
+      "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
       "has": [
         {
           "type": "header",
           "key": "accept",
-          "value": "(?<m>.*text/markdown.*)"
+          "value": ".*text/markdown.*"
         }
       ],
-      "destination": "/whatsunity.md"
+      "destination": "/api/markdown"
     },
     {
-      "source": "/((?!assets|whatsunity|.*\\..*).*)",
-      "destination": "/index.html"
+      "source": "/((?!assets|whatsunity|api|.*\\..*).*)",
+      "destination": "/app.html"
     }
   ],
   "headers": [
@@ -83,6 +91,132 @@
         {
           "key": "Content-Type",
           "value": "application/linkset+json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/ai-catalog.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-card.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-skills/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-skills/index.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/skills/index.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/oauth-protected-resource",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/oauth-authorization-server",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/.well-known/openid-configuration",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
         },
         {
           "key": "Access-Control-Allow-Origin",
@@ -104,6 +238,112 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400"
+        }
+      ]
+    },
+    {
+      "source": "/auth.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/whatsunity.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "2380"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/whatsunity-ar.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "2230"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/privacy_policy.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "850"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/terms_conditions.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        },
+        {
+          "key": "x-markdown-tokens",
+          "value": "720"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
+        }
+      ]
+    },
+    {
+      "source": "/app.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Vary",
+          "value": "Accept"
         }
       ]
     },
@@ -130,66 +370,6 @@
       ]
     },
     {
-      "source": "/whatsunity.md",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/markdown; charset=utf-8"
-        },
-        {
-          "key": "x-markdown-tokens",
-          "value": "2380"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/whatsunity-ar.md",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/markdown; charset=utf-8"
-        },
-        {
-          "key": "x-markdown-tokens",
-          "value": "2230"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/privacy_policy.md",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/markdown; charset=utf-8"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
-      "source": "/terms_conditions.md",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/markdown; charset=utf-8"
-        },
-        {
-          "key": "Vary",
-          "value": "Accept"
-        }
-      ]
-    },
-    {
       "source": "/(.*)",
       "headers": [
         {
@@ -210,7 +390,7 @@
         },
         {
           "key": "Link",
-          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </whatsunity.md>; rel=\"service-doc\", </llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"service-desc\""
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/ai-catalog.json>; rel=\"ai-catalog\", </whatsunity.md>; rel=\"service-doc\", </llms.txt>; rel=\"describedby\", </llms-full.txt>; rel=\"service-desc\""
         }
       ]
     }

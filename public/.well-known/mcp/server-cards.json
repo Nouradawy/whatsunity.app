@@ -1,0 +1,21 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "whatsunity-compound-os",
+    "version": "1.0.0",
+    "description": "Model Context Protocol Server for WhatsUnity Compound OS"
+  },
+  "endpoint": "https://whatsunity.app/mcp",
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "resources": {
+      "subscribe": false,
+      "listChanged": false
+    },
+    "prompts": {
+      "listChanged": false
+    }
+  }
+}

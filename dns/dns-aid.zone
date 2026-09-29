@@ -82,3 +82,12 @@ _mcp._agents.whatsunity.app.      3600 IN HTTPS 1 whatsunity.app. (
 _index._agents.www.whatsunity.app. 3600 IN CNAME _index._agents.whatsunity.app.
 _a2a._agents.www.whatsunity.app.   3600 IN CNAME _a2a._agents.whatsunity.app.
 _mcp._agents.www.whatsunity.app.   3600 IN CNAME _mcp._agents.whatsunity.app.
+
+; ------------------------------------------------------------------------------
+; 5. Agentic Resource Discovery (ARD) Manifest Locator
+; Standard: ARD spec §6.1
+; ------------------------------------------------------------------------------
+
+_catalog._agents.whatsunity.app.     3600 IN TXT   "url=https://whatsunity.app/.well-known/ai-catalog.json"
+_catalog._agents.www.whatsunity.app. 3600 IN CNAME _catalog._agents.whatsunity.app.
+
