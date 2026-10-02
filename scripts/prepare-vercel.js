@@ -15,13 +15,18 @@ if (fs.existsSync(distDir)) {
   const appPath = path.join(distDir, "app.html");
 
   if (fs.existsSync(indexPath)) {
-    // Copy index.html to app.html so Vercel can rewrite cleanly without static filesystem collisions
+    // Keep dist/index.html intact so Vercel serves the root / cleanly without Content-Disposition header.
+    // Also create app.html as fallback for any legacy rewrite rules.
     fs.copyFileSync(indexPath, appPath);
-    console.log("[prepare-vercel] Copied dist/index.html -> dist/app.html");
+    console.log("[prepare-vercel] dist/index.html retained and mirrored to dist/app.html");
+  }
 
-    // Remove index.html so Vercel does not bypass rewrites on root /
-    fs.unlinkSync(indexPath);
-    console.log("[prepare-vercel] Removed dist/index.html to enable Content-Negotiation rewrites on /");
+  // Ensure og.png is synced to dist
+  const ogPngSrc = path.join(publicDir, "og.png");
+  const ogPngDist = path.join(distDir, "og.png");
+  if (fs.existsSync(ogPngSrc) && !fs.existsSync(ogPngDist)) {
+    fs.copyFileSync(ogPngSrc, ogPngDist);
+    console.log("[prepare-vercel] Synced og.png to dist/og.png");
   }
 
   // Ensure public files like auth.md and .well-known are synced to dist
