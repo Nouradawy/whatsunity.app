@@ -1,9 +1,9 @@
-# WhatsUnity Resident App: Building Chat, Polls & Verified Community
+# WhatsUnity: Your Entire Community. One App.
 
-> **Definition**: The complete mobile resident portal for verified apartment buildings and gated compounds. Connect with neighbors, vote on community decisions, track home repairs, and send instant visitor passes — all in one app.
+> **Positioning**: Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps.
 
-- **Value Proposition**: One home. One subscription. Your entire household included.
-- **Official URL**: https://whatsunity.app/?route=resident
+- **Value & Pricing Model**: One home. One subscription. Everyone in your household included.
+- **Official URL**: https://whatsunity.app
 - **Developer**: Noureldin Adawy (Nouradawy) — Full-Stack & Mobile Systems Engineer
 - **Direct Contact**: support@whatsunity.app | WhatsApp: +201158428601 | Founder: nouradawy@whatsunity.app
 - **Platform Availability**: iOS, Android, Web (PWA)

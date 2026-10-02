@@ -20,6 +20,7 @@ export interface ResidentLandingContent {
     titleLine1: string;
     titleHighlight: string;
     subtitle: string;
+    pricingMessage: string;
     ctaPrimary: string;
     ctaSecondary: string;
     ctaTertiary: string;
@@ -155,12 +156,12 @@ export interface ResidentLandingContent {
 export const residentLandingData: Record<Locale, ResidentLandingContent> = {
   en: {
     meta: {
-      title: "Resident App for Building Chat, Polls & Maintenance | WhatsUnity",
+      title: "WhatsUnity — Your Entire Community. One App.",
       description:
-        "Your neighbors, building chats and home services in one app. Replace scattered WhatsApp groups and lost repair calls with verified building communication.",
-      ogTitle: "WhatsUnity: Your Neighbors, Building Chats & Home Services Together",
+        "Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included.",
+      ogTitle: "WhatsUnity — Your Entire Community. One App.",
       ogDescription:
-        "Connect with neighbors, vote on building decisions, report maintenance and generate visitor gate passes in one simple resident app.",
+        "Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included.",
     },
     nav: {
       features: "Features",
@@ -175,7 +176,8 @@ export const residentLandingData: Record<Locale, ResidentLandingContent> = {
       titleLine1: "Your neighbors, building chats and home services.",
       titleHighlight: "Together in one app.",
       subtitle:
-        "Chat with your neighbors, take part in shared decisions, track maintenance requests and generate instant visitor passes. WhatsUnity brings everything about your community together without messy group chats.",
+        "Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps.",
+      pricingMessage: "One home. One subscription. Everyone in your household included.",
       ctaPrimary: "Bring WhatsUnity to your building",
       ctaSecondary: "See how it works",
       ctaTertiary: "Already a member? Open app",
@@ -585,12 +587,12 @@ export const residentLandingData: Record<Locale, ResidentLandingContent> = {
   },
   ar: {
     meta: {
-      title: "تطبيق السكان لمحادثات المبنى، الاستطلاعات، وبلاغات الصيانة | واتس يونيتي",
+      title: "WhatsUnity — مجتمعك السكني بالكامل في تطبيق واحد",
       description:
-        "جيرانك، محادثات المبنى، وتصاريح الزوار في تطبيق واحد. بديل منظم لمجموعات الواتساب العشوائية وبلاغات الصيانة الضائعة داخل المجمعات السكنية.",
-      ogTitle: "واتس يونيتي: مجتمعك السكني وخدمات منزلك معاً في تطبيق واحد",
+        "كل ما يحتاجه السكان في مجتمعهم السكني — المحادثات، الإعلانات الرسمية، الصيانة، الخدمات، تصاريح الدخول، والتصويت وأكثر — دون التشتت بين جروبات واتساب، وأرقام هواتف، وتطبيقات متفرقة. منزل واحد. اشتراك واحد. عائلتك بالكامل مشمولة.",
+      ogTitle: "WhatsUnity — مجتمعك السكني بالكامل في تطبيق واحد",
       ogDescription:
-        "تواصل مع جيرانك باحترام وخصوصية تامة، تابع صيانة وحدتك خطوة بخطوة، واستخرج تصاريح الزوار السريعة عبر الباركود.",
+        "كل ما يحتاجه السكان في مجتمعهم السكني — المحادثات، الإعلانات الرسمية، الصيانة، الخدمات، تصاريح الدخول، والتصويت وأكثر — دون التشتت بين جروبات واتساب، وأرقام هواتف، وتطبيقات متفرقة.",
     },
     nav: {
       features: "المميزات",
@@ -602,10 +604,11 @@ export const residentLandingData: Record<Locale, ResidentLandingContent> = {
       openApp: "دخول التطبيق",
     },
     hero: {
-      titleLine1: "جيرانك، محادثات المبنى، وخدمات المنزل.",
-      titleHighlight: "معاً في تطبيق سكني واحد.",
+      titleLine1: "مجتمعك السكني بالكامل.",
+      titleHighlight: "في تطبيق واحد.",
       subtitle:
-        "تحدث مع جيرانك بخصوصية كاملة، شارك في قرارات مجتمعك، تابع صيانة وحدتك خطوة بخطوة، وأرسل تصاريح دخول الزوار الفورية. كل ما يخص سكنك في مكان منظم بعيداً عن فوضى جروبات الواتساب.",
+        "كل ما يحتاجه السكان في مجتمعهم السكني — المحادثات، الإعلانات الرسمية، الصيانة، الخدمات، تصاريح الدخول، والتصويت وأكثر — دون التشتت بين جروبات واتساب، وأرقام هواتف، وتطبيقات متفرقة.",
+      pricingMessage: "منزل واحد · اشتراك واحد · عائلتك بالكامل مشمولة.",
       ctaPrimary: "جلب واتس يونيتي لمبناك",
       ctaSecondary: "شاهد كيف يعمل",
       ctaTertiary: "لديك حساب بالفعل؟ ادخل للتطبيق",

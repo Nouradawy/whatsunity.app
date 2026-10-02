@@ -22,8 +22,9 @@ export function App() {
     const params = new URLSearchParams(window.location.search);
     const pathname = window.location.pathname.toLowerCase();
 
-    // Language resolution: URL param ?lang=ar|en or default to English
-    const lang = params.get("lang") === "ar" ? ("ar" as Locale) : ("en" as Locale);
+    // Language resolution: URL param ?lang=ar or pathname /ar -> Arabic. Otherwise default strictly to English!
+    const isAr = params.get("lang") === "ar" || pathname === "/ar" || pathname.startsWith("/ar/");
+    const lang: Locale = isAr ? "ar" : "en";
 
     // Route resolution: path /technical or ?route=technical
     const isTech =

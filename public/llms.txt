@@ -9,8 +9,8 @@ This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini
 
 ## 1. Primary Systems & Architectures
 
-- [WhatsUnity Resident App Guide (English)](/resident.md): Building chat, verified neighbor directory, one home one subscription household licensing, 1-tap photo maintenance, and offline QR guest passes.
-- [WhatsUnity Resident App Guide (Arabic / دليل تطبيق السكان)](/resident-ar.md): دليل تطبيق السكان الكامل: شات العمارة، استطلاعات الرأي الموثقة، بلاغات الصيانة المصورة، وتصاريح الزوار السريعة.
+- [WhatsUnity Resident App Guide (English)](/resident.md): Your entire community in one app. Conversations, announcements, maintenance, services, access, and voting without juggling groups or apps. One home. One subscription. Everyone in your household included.
+- [WhatsUnity Resident App Guide (Arabic / دليل تطبيق السكان)](/resident-ar.md): مجتمعك السكني بالكامل في تطبيق واحد: محادثات المبنى، استطلاعات الرأي، بلاغات الصيانة المصورة، وتصاريح الزوار السريعة. منزل واحد · اشتراك واحد · عائلتك بالكامل مشمولة.
 - [WhatsUnity Residential OS (English Spec)](/whatsunity.md): One home. One subscription. Your entire household included. WhatsUnity turns your compound into a connected, secure, digitally managed community. Built with Flutter Clean Architecture, featuring 100% offline cryptographic QR gatekeeping, SQLite Local Master with 0ms optimistic UI mutations, dual-engine messaging (Telegram MTProto for zero-cost and Appwrite Realtime WebSockets), and an automated 9-role maintenance and security lifecycle.
 - [WhatsUnity Production Screen Catalog (34 Screens & Features)](/catalog.md): Complete machine-readable screen-by-screen feature catalog detailing all 34 production mobile screens across 6 operational personas (Residents, Offline Gatekeepers, Mobile Patrols, Facility Technicians, Chief Engineers, and Community Managers).
 - [WhatsUnity Residential OS (Arabic Spec / المعمارية بالعربية)](/whatsunity-ar.md): وثيقة المواصفات الفنية والمعمارية الكاملة لنظام تشغيل الكمبوندات والمجتمعات السكنية WhatsUnity. توضح بنية فلاتر المتقدمة، وقاعدة SQLite المحلية، وتصاريح QR المشفرة أوفلاين، وحوكمة 9 أدوار تشغيلية.

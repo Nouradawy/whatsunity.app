@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr" class="wu-no-scrollbar dark">
+<html lang="en" dir="ltr" class="wu-no-scrollbar dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WhatsUnity — Resident App for Building Chat, Polls & Maintenance</title>
+    <title>WhatsUnity — Your Entire Community. One App.</title>
     <meta
       name="description"
-      content="Your neighbors, building chats and home services in one app. Replace scattered WhatsApp groups and lost repair calls with verified residential communication."
+      content="Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included."
     />
     <meta
       name="keywords"
-      content="WhatsUnity, resident app, building chat app, apartment community app, HOA communication app, resident maintenance requests, visitor gate passes, واتس يونيتي, تطبيق سكان الكمبوند, إدارة المجمعات السكنية"
+      content="WhatsUnity, community app, resident app, building chat app, apartment community app, HOA communication app, resident maintenance requests, visitor gate passes, residential operating system, واتس يونيتي, تطبيق سكان الكمبوند"
     />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#05070a" />
 
-    <!-- OpenGraph / Social (Facebook, WhatsApp, LinkedIn, Telegram) -->
+    <!-- OpenGraph / Social (Facebook, WhatsApp, LinkedIn, Telegram, Product Hunt) -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="WhatsUnity | Resident App" />
-    <meta property="og:title" content="WhatsUnity — Resident App for Building Chat, Polls & Maintenance" />
+    <meta property="og:site_name" content="WhatsUnity" />
+    <meta property="og:title" content="WhatsUnity — Your Entire Community. One App." />
     <meta
       property="og:description"
-      content="Your neighbors, building chats and home services in one app. Connect with neighbors, vote on community decisions, track maintenance, and send visitor passes."
+      content="Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included."
     />
     <meta property="og:url" content="https://whatsunity.app/" />
     <meta property="og:locale" content="en_US" />
@@ -31,14 +31,14 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="WhatsUnity Resident App — Building chats, polls and home services" />
+    <meta property="og:image:alt" content="WhatsUnity — Your Entire Community. One App." />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="WhatsUnity — Resident App for Building Chat, Polls & Maintenance" />
+    <meta name="twitter:title" content="WhatsUnity — Your Entire Community. One App." />
     <meta
       name="twitter:description"
-      content="Your neighbors, building chats and home services in one app. Replace scattered group chats with verified building communication."
+      content="Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included."
     />
     <meta name="twitter:image" content="https://whatsunity.app/assets/whatsunity/whatsunity-og.png" />
 
@@ -52,8 +52,9 @@
 
     <!-- Canonical & Alternates -->
     <link rel="canonical" href="https://whatsunity.app/" />
+    <link rel="alternate" hreflang="en" href="https://whatsunity.app/" />
+    <link rel="alternate" hreflang="en-US" href="https://whatsunity.app/" />
     <link rel="alternate" hreflang="ar" href="https://whatsunity.app/?lang=ar" />
-    <link rel="alternate" hreflang="en" href="https://whatsunity.app/?lang=en" />
     <link rel="alternate" hreflang="x-default" href="https://whatsunity.app/" />
     <link rel="alternate" type="text/markdown" href="https://whatsunity.app/resident.md" hreflang="en" title="WhatsUnity Resident App Guide" />
     <link rel="alternate" type="text/markdown" href="https://whatsunity.app/resident-ar.md" hreflang="ar" title="WhatsUnity Resident App Guide (Arabic)" />
@@ -93,11 +94,12 @@
         "@type": "SoftwareApplication",
         "@id": "https://whatsunity.app/#software",
         "name": "WhatsUnity",
-        "alternateName": ["واتس يونيتي", "WhatsUnity Compound OS"],
-        "applicationCategory": "BusinessApplication",
-        "applicationSubCategory": "Residential Community Management Platform",
-        "operatingSystem": "iOS, Android, Web, Windows",
-        "description": "WhatsUnity turns your compound into a connected, secure, digitally managed community. One home. One subscription. Your entire household included — with 100% offline QR gate security, unit-verified resident directories, and automated 9-role maintenance workflows.",
+        "alternateName": ["WhatsUnity Community App", "واتس يونيتي"],
+        "headline": "Your Entire Community. One App.",
+        "applicationCategory": "LifestyleApplication",
+        "applicationSubCategory": "Residential Community Platform",
+        "operatingSystem": "iOS, Android, Web",
+        "description": "Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps. One home. One subscription. Everyone in your household included.",
         "softwareRequirements": "Flutter, Dart 3, SQLite Local Master, Appwrite Cloud, Telegram MTProto API, Cloudflare R2",
         "featureList": [
           "100% Offline Cryptographic QR Gate Passes",
@@ -225,8 +227,267 @@
     </script>
   </head>
   <body class="wu-no-scrollbar bg-slate-50 dark:bg-[#05070a] text-slate-900 dark:text-slate-100">
-    <!-- Declarative WebMCP Tool Forms (https://github.com/webmachinelearning/webmcp) -->
-    <div id="webmcp-declarative-tools" style="display: none;" aria-hidden="true">
+    <div id="root">
+      <!-- Semantic Static Prerender for Search Engines, Social Preview Crawlers & Fast First Paint -->
+      <div style="min-height: 100vh; background-color: #03060a; color: #f8fafc; font-family: Inter, system-ui, -apple-system, sans-serif;">
+        <!-- Header / Navigation -->
+        <header style="border-bottom: 1px solid rgba(255, 255, 255, 0.08); background-color: rgba(3, 6, 10, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 50;">
+          <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;">
+            <a href="/" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ffffff; font-weight: 800; font-size: 20px;">
+              <span style="display: inline-block; width: 12px; height: 12px; border-radius: 50%; background-color: #10b981; box-shadow: 0 0 10px #10b981;"></span>
+              WhatsUnity
+            </a>
+            <nav aria-label="Main Navigation" style="display: flex; align-items: center; gap: 20px;">
+              <a href="#the-problem" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500;">How It Works</a>
+              <a href="#features" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500;">Features</a>
+              <a href="#pricing" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500;">Pricing</a>
+              <a href="/?route=technical" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500;">Architecture</a>
+              <a href="/catalog" style="color: #94a3b8; text-decoration: none; font-size: 14px; font-weight: 500;">34 Screens</a>
+              <a href="https://wa.me/201158428601" style="background-color: #10b981; color: #04140c; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 700; text-decoration: none;">Bring to My Building</a>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+          <!-- Hero Section -->
+          <section id="hero" style="max-width: 960px; margin: 0 auto; padding: 80px 24px 60px; text-align: center;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background-color: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.25); color: #34d399; font-size: 12px; font-weight: 700; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.05em;">
+              Residential Community Operating System
+            </div>
+            
+            <h1 style="font-size: clamp(36px, 6vw, 64px); font-weight: 900; line-height: 1.1; margin: 0 0 20px; color: #ffffff; letter-spacing: -0.02em;">
+              Your entire community. <span style="color: #34d399;">One app.</span>
+            </h1>
+            
+            <p style="font-size: clamp(16px, 2.2vw, 20px); line-height: 1.6; color: #cbd5e1; max-width: 760px; margin: 0 auto 24px;">
+              Everything residents need to live in their community — conversations, announcements, maintenance, services, access, voting and more — without juggling groups, phone numbers and separate apps.
+            </p>
+
+            <!-- Pricing / Subscription Hierarchy Pill -->
+            <div style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 9999px; background-color: rgba(6, 78, 59, 0.5); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 14px; font-weight: 600; margin-bottom: 36px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+              <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #34d399;"></span>
+              One home. One subscription. Everyone in your household included.
+            </div>
+
+            <!-- CTAs -->
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px;">
+              <a href="https://wa.me/201158428601" style="background-color: #10b981; color: #04140c; padding: 14px 28px; border-radius: 12px; font-size: 15px; font-weight: 800; text-decoration: none; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);">
+                Bring WhatsUnity to your building
+              </a>
+              <a href="#the-problem" style="background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #ffffff; padding: 14px 24px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none;">
+                See how it works &darr;
+              </a>
+              <a href="https://app.whatsunity.app" target="_blank" rel="noopener noreferrer" style="border: 1px solid #334155; color: #94a3b8; padding: 14px 20px; border-radius: 12px; font-size: 15px; font-weight: 600; text-decoration: none;">
+                Open Web App &rarr;
+              </a>
+            </div>
+          </section>
+
+          <!-- Problem & Solution Section -->
+          <section id="the-problem" style="max-width: 1100px; margin: 40px auto 80px; padding: 0 24px;">
+            <div style="text-align: center; margin-bottom: 48px;">
+              <h2 style="font-size: clamp(28px, 4vw, 40px); font-weight: 800; color: #ffffff; margin-bottom: 12px;">
+                Why residential communities struggle with scattered group chats
+              </h2>
+              <p style="font-size: 17px; color: #94a3b8; max-width: 680px; margin: 0 auto;">
+                Modern apartment buildings and gated compounds are held together by disconnected tools that cause frustration for residents, boards, and property staff.
+              </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+              <article style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px;">
+                <h3 style="font-size: 20px; font-weight: 700; color: #f87171; margin: 0 0 12px;">The "WhatsApp Group" Chaos</h3>
+                <p style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin-bottom: 14px;">
+                  Unmoderated group chats expose your private phone number to strangers, bury crucial building announcements under hundreds of casual messages, and allow departed tenants to linger forever.
+                </p>
+                <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 12px; color: #34d399; font-size: 14px; font-weight: 600;">
+                  WhatsUnity Solution: Verified unit directory without sharing phone numbers. Official announcements cleanly separated from social chats.
+                </div>
+              </article>
+
+              <article style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px;">
+                <h3 style="font-size: 20px; font-weight: 700; color: #f87171; margin: 0 0 12px;">Lost Maintenance Requests</h3>
+                <p style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin-bottom: 14px;">
+                  Verbal requests to janitors or lost texts to building supervisors result in delayed repairs, disputes over shared expenses, and zero progress tracking.
+                </p>
+                <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 12px; color: #34d399; font-size: 14px; font-weight: 600;">
+                  WhatsUnity Solution: 1-tap photo maintenance requests. Take a photo, submit in seconds, and track repair status from diagnosis to sign-off.
+                </div>
+              </article>
+
+              <article style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px;">
+                <h3 style="font-size: 20px; font-weight: 700; color: #f87171; margin: 0 0 12px;">Visitor Gate Friction</h3>
+                <p style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin-bottom: 14px;">
+                  Visitors wait at security gates while guards try calling residents over spotty cellular networks, creating long queues and security risks.
+                </p>
+                <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 12px; color: #34d399; font-size: 14px; font-weight: 600;">
+                  WhatsUnity Solution: 100% offline cryptographic QR visitor passes. Gatekeepers scan and verify passes in sub-50ms without internet.
+                </div>
+              </article>
+
+              <article style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 28px;">
+                <h3 style="font-size: 20px; font-weight: 700; color: #f87171; margin: 0 0 12px;">Unfair Per-User Pricing</h3>
+                <p style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin-bottom: 14px;">
+                  Legacy apps charge per occupant, forcing families to share a single account or pay escalating fees for each family member.
+                </p>
+                <div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 12px; color: #34d399; font-size: 14px; font-weight: 600;">
+                  WhatsUnity Solution: One home. One subscription. Everyone in your household included at zero additional cost.
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Core Feature Pillars -->
+          <section id="features" style="max-width: 1100px; margin: 0 auto 80px; padding: 0 24px;">
+            <div style="text-align: center; margin-bottom: 40px;">
+              <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: #ffffff;">Everything residents need in one connected place</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #38bdf8; margin: 0 0 8px;">Private Building & Floor Chats</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">Connect directly with neighbors in your specific building or floor without sharing personal phone numbers.</p>
+              </div>
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #34d399; margin: 0 0 8px;">1-Tap Photo Maintenance</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">Report plumbing, electrical, or elevator faults with photos and track repairs in real time.</p>
+              </div>
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #a78bfa; margin: 0 0 8px;">100% Offline QR Visitor Passes</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">Issue cryptographically signed passes that security gates scan in sub-50ms without internet.</p>
+              </div>
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #f59e0b; margin: 0 0 8px;">Binding Community Polls</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">Vote on building improvements, budgets, and rules with verified, unit-weighted quorums.</p>
+              </div>
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #ec4899; margin: 0 0 8px;">Vetted Home Services</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">Access community-recommended electricians, plumbers, painters, and HVAC technicians with transparent pricing.</p>
+              </div>
+              <div style="padding: 24px; border-radius: 14px; background-color: rgba(30, 41, 59, 0.35); border: 1px solid rgba(255, 255, 255, 0.06);">
+                <h3 style="font-size: 18px; font-weight: 700; color: #10b981; margin: 0 0 8px;">Whole Household Licensing</h3>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin: 0;">One subscription covers your entire residential unit. Add family members with individual verified accounts for free.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Pricing Section -->
+          <section id="pricing" style="max-width: 800px; margin: 0 auto 80px; padding: 0 24px; text-align: center;">
+            <h2 style="font-size: clamp(26px, 3.5vw, 36px); font-weight: 800; color: #ffffff; margin-bottom: 12px;">Simple, Transparent Household Pricing</h2>
+            <p style="color: #94a3b8; font-size: 16px; margin-bottom: 32px;">No per-user fees. No hidden add-ons. Full transparency for residents and compound boards.</p>
+            <div style="background: linear-gradient(135deg, rgba(6, 78, 59, 0.25), rgba(15, 23, 42, 0.7)); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 20px; padding: 36px 24px;">
+              <span style="background: #10b981; color: #04140c; padding: 4px 12px; border-radius: 9999px; font-size: 12px; font-weight: 800; text-transform: uppercase;">Per-Home License</span>
+              <h3 style="font-size: 32px; font-weight: 900; color: #ffffff; margin: 16px 0 8px;">One Home. One Subscription.</h3>
+              <p style="font-size: 18px; color: #34d399; font-weight: 700; margin: 0 0 20px;">Everyone in your household included.</p>
+              <p style="color: #cbd5e1; font-size: 15px; max-width: 540px; margin: 0 auto 24px; line-height: 1.6;">
+                Every apartment or villa receives full platform access. Homeowners invite spouses, children, and domestic staff with verified independent accounts under one simple compound plan.
+              </p>
+              <a href="https://wa.me/201158428601" style="display: inline-block; background-color: #10b981; color: #04140c; padding: 12px 28px; border-radius: 10px; font-size: 15px; font-weight: 800; text-decoration: none;">
+                Get WhatsUnity for Your Building
+              </a>
+            </div>
+          </section>
+
+          <!-- Technical & Offline Architecture -->
+          <section id="technical" style="max-width: 1000px; margin: 0 auto 80px; padding: 0 24px;">
+            <div style="text-align: center; margin-bottom: 36px;">
+              <h2 style="font-size: clamp(24px, 3vw, 32px); font-weight: 800; color: #ffffff; margin-bottom: 8px;">
+                Engineered for Uncompromising Reliability: 100% Offline-First
+              </h2>
+              <p style="color: #94a3b8; font-size: 15px;">Built in Flutter &amp; Dart 3 with zero code generation to keep compound operations running even during network blackouts.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+              <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px;">
+                <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 6px;">SQLite Local Master</h4>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0;">0ms UI reaction time. All actions save locally first and synchronize when connectivity resumes.</p>
+              </div>
+              <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px;">
+                <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 6px;">Dual-Engine Messaging</h4>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0;">Appwrite Realtime WebSockets for instant resident chats and Telegram MTProto for cost-free broadcasts.</p>
+              </div>
+              <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px;">
+                <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 6px;">Sub-50ms Offline Gates</h4>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0;">Cryptographic QR validation runs on gatekeeper tablets without internet access or remote dependencies.</p>
+              </div>
+              <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 12px; padding: 20px;">
+                <h4 style="color: #ffffff; font-weight: 700; margin: 0 0 6px;">9-Role Governance</h4>
+                <p style="color: #94a3b8; font-size: 13px; line-height: 1.5; margin: 0;">Tailored interfaces for Residents, Gatekeepers, Patrol Guards, Technicians, Engineers, and Managers.</p>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 24px;">
+              <a href="/?route=technical" style="color: #34d399; font-size: 14px; font-weight: 700; text-decoration: none;">
+                Read the Complete Engineering Case Study &amp; Architecture Spec &rarr;
+              </a>
+            </div>
+          </section>
+
+          <!-- FAQ Section -->
+          <section id="faq" style="max-width: 860px; margin: 0 auto 80px; padding: 0 24px;">
+            <h2 style="font-size: clamp(24px, 3vw, 32px); font-weight: 800; color: #ffffff; text-align: center; margin-bottom: 36px;">
+              Frequently Asked Questions
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <details style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 22px;">
+                <summary style="font-weight: 700; color: #ffffff; font-size: 16px; cursor: pointer;">What does &ldquo;One home. One subscription. Everyone in your household included&rdquo; mean?</summary>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+                  WhatsUnity licenses per residential unit rather than per user. One subscription covers the entire household, allowing homeowners to invite family members with independent accounts at zero additional cost.
+                </p>
+              </details>
+              <details style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 22px;">
+                <summary style="font-weight: 700; color: #ffffff; font-size: 16px; cursor: pointer;">How does 100% offline gatekeeping work?</summary>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+                  Visitor QR passes embed encrypted unit tokens and cryptographic timestamps. Gatekeeper tablets validate passes locally in under 50ms without needing an active cellular or Wi-Fi connection.
+                </p>
+              </details>
+              <details style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 22px;">
+                <summary style="font-weight: 700; color: #ffffff; font-size: 16px; cursor: pointer;">How does a residential building or compound get started?</summary>
+                <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-top: 12px;">
+                  Residents or HOA board members contact us via WhatsApp (+201158428601) or email (support@whatsunity.app). Compounds are onboarded with turnkey data setup within 48 hours.
+                </p>
+              </details>
+            </div>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer style="border-top: 1px solid rgba(255, 255, 255, 0.08); background-color: rgba(3, 6, 10, 0.95); padding: 48px 24px 36px;">
+          <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
+            <div>
+              <div style="font-size: 18px; font-weight: 800; color: #ffffff; margin-bottom: 8px;">WhatsUnity</div>
+              <p style="color: #94a3b8; font-size: 14px; max-width: 320px; line-height: 1.5; margin: 0 0 16px;">
+                Your entire community in one app. Conversations, announcements, maintenance, services, access, and voting.
+              </p>
+              <p style="color: #64748b; font-size: 13px; margin: 0;">
+                Founder &amp; Systems Architect: <a href="https://www.nouradawy.tech/" target="_blank" rel="noopener noreferrer" style="color: #cbd5e1; text-decoration: none;">Noureldin Adawy</a>
+              </p>
+            </div>
+            <div>
+              <div style="font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Contact &amp; Support</div>
+              <p style="color: #94a3b8; font-size: 14px; margin: 0 0 6px;">Support: <a href="mailto:support@whatsunity.app" style="color: #34d399; text-decoration: none;">support@whatsunity.app</a></p>
+              <p style="color: #94a3b8; font-size: 14px; margin: 0 0 6px;">Founder: <a href="mailto:nouradawy@whatsunity.app" style="color: #34d399; text-decoration: none;">nouradawy@whatsunity.app</a></p>
+              <p style="color: #94a3b8; font-size: 14px; margin: 0;">WhatsApp: <a href="https://wa.me/201158428601" style="color: #34d399; text-decoration: none;">+201158428601</a></p>
+            </div>
+            <div>
+              <div style="font-size: 14px; font-weight: 700; color: #ffffff; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em;">Documentation &amp; Legal</div>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
+                <li><a href="/?route=technical" style="color: #94a3b8; text-decoration: none;">Technical Architecture</a></li>
+                <li><a href="/catalog" style="color: #94a3b8; text-decoration: none;">34-Screen Catalog</a></li>
+                <li><a href="/privacy-policy" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a></li>
+                <li><a href="/terms-conditions" style="color: #94a3b8; text-decoration: none;">Terms &amp; Conditions</a></li>
+                <li><a href="/auth.md" style="color: #94a3b8; text-decoration: none;">Agent Auth Specification</a></li>
+              </ul>
+            </div>
+          </div>
+          <div style="max-width: 1100px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.06); text-align: center; color: #64748b; font-size: 13px;">
+            &copy; 2026 WhatsUnity. All rights reserved. One home. One subscription. Everyone in your household included.
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Declarative WebMCP Tool Forms (inside template tag to prevent scraper pollution) -->
+    <template id="webmcp-declarative-tools">
       <form id="tool-verify-gate-pass" toolname="verify_gate_pass" tooldescription="Cryptographically verify a residential or visitor QR gate pass in sub-50ms offline mode or online mode.">
         <input type="text" name="passCode" toolparamdescription="Cryptographically signed visitor or resident QR pass payload" required />
         <button type="submit">Verify Pass</button>
@@ -242,9 +503,8 @@
         <input type="text" name="query" toolparamdescription="Search keyword or service name" required />
         <button type="submit">Search</button>
       </form>
-    </div>
+    </template>
 
-    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -180,12 +180,20 @@ export function ResidentHero({ locale, onOpenBringModal }: Props) {
         </h1>
 
         <p
-          className={`mx-auto mt-5 max-w-2xl text-base sm:text-lg text-slate-300 leading-relaxed ${
+          className={`mx-auto mt-5 max-w-3xl text-base sm:text-lg text-slate-300 leading-relaxed ${
             isRtl ? "wu-font-ar-body" : "wu-font-en-body"
           }`}
         >
           {content.subtitle}
         </p>
+
+        {/* Value & Pricing Hierarchy: One home. One subscription. */}
+        <div className="mt-5 flex items-center justify-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/40 px-4 py-1.5 text-xs sm:text-sm font-semibold text-emerald-300 backdrop-blur-md shadow-sm">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>{content.pricingMessage}</span>
+          </div>
+        </div>
 
         {/* Action Controls: 3 Clear CTAs */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3.5">
@@ -328,12 +336,15 @@ export function ResidentHero({ locale, onOpenBringModal }: Props) {
             <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#03060a] via-transparent to-[#03060a]/70 lg:bg-gradient-to-r lg:from-[#03060a]/90 lg:via-[#03060a]/40 lg:to-transparent" />
           </div>
 
-          {/* Floating Scene Information Card on Desktop */}
+          {/* Floating Scene Information Card on Desktop — Pinned to the physical LEFT in all languages */}
           <div
-            dir={isRtl ? "rtl" : "ltr"}
-            className="relative z-20 mx-auto max-w-7xl w-full h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between pointer-events-none"
+            dir="ltr"
+            className="relative z-20 mx-auto max-w-7xl w-full h-full px-4 sm:px-6 lg:px-8 flex items-center justify-start pointer-events-none"
           >
-            <div className="w-full max-w-xl pointer-events-auto mt-24 lg:mt-0">
+            <div
+              dir={isRtl ? "rtl" : "ltr"}
+              className={`w-full max-w-xl pointer-events-auto mt-24 lg:mt-0 ${isRtl ? "text-right" : "text-left"}`}
+            >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentScene.id}
