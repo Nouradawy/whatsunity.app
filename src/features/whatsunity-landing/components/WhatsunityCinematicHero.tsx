@@ -55,13 +55,15 @@ export function WhatsunityCinematicHero({
   const currentScene = scenes[activeSceneIndex];
 
   // Scroll distribution across 4 acts:
-  // Slide 1 spans 0.00 -> 0.40 (spans entire Video 1 playback)
-  // Slide 2 spans 0.40 -> 0.60 (looping video 2 - Community)
-  // Slide 3 spans 0.60 -> 0.80 (looping video 3 - QR Security)
-  // Slide 4 spans 0.80 -> 1.00 (looping video 4 - Maintenance)
-  const SLIDE_1_END = 0.40;
-  const SLIDE_2_END = 0.60;
-  const SLIDE_3_END = 0.80;
+  // Slide 1 spans 0.00 -> 0.28 (spans entire Video 1 playback scrub ~151vh)
+  // Slide 2 spans 0.28 -> 0.46 (looping video 2 - Community ~97vh)
+  // Slide 3 spans 0.46 -> 0.64 (looping video 3 - QR Security ~97vh)
+  // Slide 4 spans 0.64 -> 1.00 (looping video 4 - Maintenance & Live Demo ~194vh)
+  // Scene 4 contains more detailed governance text and the live demo consultation card,
+  // so it receives an expansive, dedicated runway (~194vh) so the next section never overlaps or hijacks it prematurely.
+  const SLIDE_1_END = 0.28;
+  const SLIDE_2_END = 0.46;
+  const SLIDE_3_END = 0.64;
 
   // Track scroll progress through the pinned runway (responsive height)
   const { scrollYProgress } = useScroll({
@@ -204,9 +206,9 @@ export function WhatsunityCinematicHero({
 
     let targetProgress = 0;
     if (index === 0) targetProgress = 0;
-    else if (index === 1) targetProgress = SLIDE_1_END + 0.01;
-    else if (index === 2) targetProgress = SLIDE_2_END + 0.01;
-    else targetProgress = SLIDE_3_END + 0.01;
+    else if (index === 1) targetProgress = SLIDE_1_END + 0.005;
+    else if (index === 2) targetProgress = SLIDE_2_END + 0.005;
+    else targetProgress = SLIDE_3_END + 0.005;
 
     const targetY = runwayTop + targetProgress * runwayHeight;
     window.scrollTo({ top: targetY, behavior: "smooth" });
@@ -216,7 +218,7 @@ export function WhatsunityCinematicHero({
     <div
       id="overview"
       ref={runwayRef}
-      className="relative w-full h-[440vh] bg-[#03060a]"
+      className="relative w-full h-[640vh] bg-[#03060a]"
     >
       {/* ══════════════════════════════════════════════════════════════
           PINNED CINEMATIC STAGE (STICKY VIEWPORT)
@@ -441,7 +443,7 @@ export function WhatsunityCinematicHero({
               {/* Primary Action Button (at least 44px touch target) */}
               <div className="mt-3 flex items-center gap-2">
                 <a
-                  href="https://wa.me/nouradawy?text=Hello%20Noureldin,%20I'd%20like%20to%20schedule%20a%20live%20demo%20and%20consultation%20for%20WhatsUnity."
+                  href="https://wa.me/201158428601?text=Hello%20WhatsUnity,%20I'd%20like%20to%20schedule%20a%20live%20demo%20and%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`group min-h-[44px] flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 px-4 py-2.5 text-xs sm:text-sm font-black text-[#04140c] shadow-[0_2px_15px_rgba(0,226,138,0.35)] wu-pressable ${
@@ -511,11 +513,11 @@ export function WhatsunityCinematicHero({
             3. DESKTOP HERO CONTENT CARD PINNED OVER LEFT (DESKTOP ONLY)
         ══════════════════════════════════════════════════════════════ */}
         <div className="relative z-20 w-full pl-4 sm:pl-8 lg:pl-10 xl:pl-12 pr-4 hidden lg:flex justify-start">
-          <div className="w-full max-w-xl lg:max-w-[540px] xl:max-w-[580px] flex flex-col items-start">
+          <div className="w-full max-w-xl lg:max-w-[540px] xl:max-w-[590px] flex flex-col justify-between h-[calc(100vh-36px)] max-h-[820px] py-1">
             {/* Sleek Frosted Glass Story Card for Desktop */}
             <div
               dir={isRtl ? "rtl" : "ltr"}
-              className={`w-full h-auto min-h-[580px] lg:h-[78vh] lg:min-h-[640px] lg:max-h-[760px] rounded-3xl border border-white/15 bg-slate-950/80 p-6 sm:p-7 backdrop-blur-2xl shadow-2xl flex flex-col justify-between ${
+              className={`w-full flex-1 min-h-0 rounded-3xl border border-white/15 bg-slate-950/85 p-5 xl:p-6 backdrop-blur-2xl shadow-2xl flex flex-col justify-between overflow-y-auto wu-no-scrollbar ${
                 isRtl ? "text-right" : "text-left"
               }`}
             >
@@ -526,7 +528,7 @@ export function WhatsunityCinematicHero({
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="w-full flex flex-col justify-between h-full"
+                  className="w-full flex flex-col justify-between min-h-full"
                 >
                   <div>
                     {/* Feature Header Badge with Icon */}
@@ -534,32 +536,32 @@ export function WhatsunityCinematicHero({
                       initial={{ opacity: 0, y: 8, filter: "blur(3px)" }}
                       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                       transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                      className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.06] px-3.5 py-1.5 text-xs sm:text-sm font-extrabold text-white backdrop-blur-md shadow-sm"
+                      className="inline-flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.06] px-3 py-1 text-xs font-extrabold text-white backdrop-blur-md shadow-sm"
                     >
                       <span
-                        className="flex h-5 w-5 items-center justify-center rounded-lg shadow-inner"
+                        className="flex h-4 w-4 xl:h-4.5 xl:w-4.5 items-center justify-center rounded-lg shadow-inner"
                         style={{
                           backgroundColor: `${currentScene.accentColor}30`,
                           color: currentScene.accentColor,
                         }}
                       >
-                        {getSceneIcon(currentScene.iconName, "h-3.5 w-3.5")}
+                        {getSceneIcon(currentScene.iconName, "h-3 w-3 xl:h-3.5 xl:w-3.5")}
                       </span>
                       <span className={isRtl ? "wu-font-ar-display" : "wu-font-en-display"}>
                         {currentScene.tag}
                       </span>
                     </motion.div>
 
-                    {/* Main Headline - Larger, impactful font with blur-reveal */}
+                    {/* Main Headline - Impactful, refined responsive typography */}
                     <motion.h1
                       initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
                       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                       transition={{ duration: 0.42, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-                      className={`mt-4 text-3xl sm:text-4xl lg:text-[40px] xl:text-[44px] font-black tracking-tight text-white ${
+                      className={`mt-2.5 xl:mt-3 text-2xl sm:text-3xl lg:text-[27px] xl:text-[31px] font-black tracking-tight text-white ${
                         isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                       }`}
                       style={{
-                        lineHeight: isRtl ? 1.3 : 1.15,
+                        lineHeight: isRtl ? 1.25 : 1.16,
                       }}
                     >
                       {currentScene.title}{" "}
@@ -578,15 +580,15 @@ export function WhatsunityCinematicHero({
                       text={currentScene.subtitle}
                       runKey={currentScene.id}
                       delay={0.18}
-                      stagger={0.035}
-                      className={`mt-3 sm:mt-4 text-sm sm:text-base lg:text-[17px] leading-relaxed text-slate-200 ${
+                      stagger={0.03}
+                      className={`mt-2 xl:mt-2.5 text-xs sm:text-sm lg:text-[13.5px] xl:text-[14.5px] leading-relaxed text-slate-200 ${
                         isRtl ? "wu-font-ar-body" : "wu-font-en-body"
                       }`}
                     />
                   </div>
 
                   {/* Feature Bullets (Desktop Only) */}
-                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+                  <div className="mt-2.5 xl:mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 xl:gap-2.5">
                     {currentScene.bulletPoints.slice(0, 2).map((bp, idx) => (
                       <motion.div
                         key={idx}
@@ -597,22 +599,22 @@ export function WhatsunityCinematicHero({
                           duration: 0.38,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-3 sm:p-3.5 backdrop-blur-sm transition hover:border-white/20 hover:bg-white/[0.07]"
+                        className="flex items-start gap-2.5 rounded-xl border border-white/10 bg-white/[0.04] p-2.5 xl:p-3 backdrop-blur-sm transition hover:border-white/20 hover:bg-white/[0.07]"
                       >
                         <CheckCircle2
-                          className="h-4 w-4 shrink-0 mt-0.5"
+                          className="h-3.5 w-3.5 shrink-0 mt-0.5"
                           style={{ color: currentScene.accentColor }}
                         />
                         <div>
                           <div
-                            className={`text-xs sm:text-sm font-bold text-white ${
+                            className={`text-xs xl:text-sm font-bold text-white ${
                               isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                             }`}
                           >
                             {bp.title}
                           </div>
                           <p
-                            className={`mt-1 text-xs text-slate-300 leading-relaxed ${
+                            className={`mt-0.5 text-[11px] xl:text-xs text-slate-300 leading-relaxed ${
                               isRtl ? "wu-font-ar-body" : "wu-font-en-body"
                             }`}
                           >
@@ -628,16 +630,16 @@ export function WhatsunityCinematicHero({
                     initial={{ opacity: 0, y: 10, filter: "blur(3px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ delay: 0.34, duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
-                    className="mt-3.5 sm:mt-4 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 via-slate-900/60 to-teal-950/30 p-3.5 sm:p-4 backdrop-blur-md shadow-[0_4px_24px_rgba(0,226,138,0.14)]"
+                    className="mt-2.5 xl:mt-3 rounded-2xl border border-emerald-500/30 bg-gradient-to-r from-emerald-950/40 via-slate-900/60 to-teal-950/30 p-3 xl:p-3.5 backdrop-blur-md shadow-[0_4px_24px_rgba(0,226,138,0.14)]"
                   >
-                    <div className="flex items-center justify-between gap-2 mb-2.5">
+                    <div className="flex items-center justify-between gap-2 mb-2">
                       <div className="flex items-center gap-2">
                         <span className="relative flex h-2 w-2">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                         </span>
                         <span
-                          className={`text-xs font-bold text-emerald-400 ${
+                          className={`text-[11px] xl:text-xs font-bold text-emerald-400 ${
                             isRtl ? "wu-font-ar-display" : "wu-font-mono uppercase tracking-wider"
                           }`}
                         >
@@ -652,10 +654,10 @@ export function WhatsunityCinematicHero({
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                       <a
-                        href="https://wa.me/nouradawy?text=Hello%20Noureldin,%20I'd%20like%20to%20schedule%20a%20live%20demo%20and%20consultation%20for%20WhatsUnity."
+                        href="https://wa.me/201158428601?text=Hello%20WhatsUnity,%20I'd%20like%20to%20schedule%20a%20live%20demo%20and%20consultation."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`group wu-pressable flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 py-2.5 px-3.5 text-xs sm:text-sm font-black text-[#04140c] shadow-[0_2px_15px_rgba(0,226,138,0.35)] transition hover:brightness-110 ${
+                        className={`group wu-pressable flex-1 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 via-emerald-400 to-teal-400 py-2 px-3 text-xs xl:text-sm font-black text-[#04140c] shadow-[0_2px_15px_rgba(0,226,138,0.35)] transition hover:brightness-110 ${
                           isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                         }`}
                       >
@@ -671,7 +673,7 @@ export function WhatsunityCinematicHero({
                       <button
                         type="button"
                         onClick={onOpenPresentation}
-                        className={`wu-pressable flex items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.06] py-2.5 px-3 text-xs font-bold text-slate-200 transition hover:border-emerald-500/40 hover:bg-white/[0.1] hover:text-white ${
+                        className={`wu-pressable flex items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-white/[0.06] py-2 px-2.5 text-xs font-bold text-slate-200 transition hover:border-emerald-500/40 hover:bg-white/[0.1] hover:text-white ${
                           isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                         }`}
                       >
@@ -680,13 +682,13 @@ export function WhatsunityCinematicHero({
                       </button>
                     </div>
 
-                    <div className="mt-2.5 flex items-center justify-between text-[11px] text-slate-400 px-0.5">
+                    <div className="mt-2 flex items-center justify-between text-[10px] xl:text-[11px] text-slate-400 px-0.5">
                       <span className="flex items-center gap-1.5">
                         <ShieldCheck className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
                         <span>{isRtl ? "استعراض لـ 34+ شاشة وبوابات أوفلاين" : "34+ production screens & offline gates"}</span>
                       </span>
                       <a
-                        href="mailto:nouradawyonex@gmail.com?subject=WhatsUnity%20Compound%20OS%20Deployment%20Inquiry"
+                        href="mailto:support@whatsunity.app?subject=WhatsUnity%20Compound%20OS%20Deployment%20Inquiry"
                         className="hover:text-emerald-400 transition-colors flex items-center gap-1 font-medium"
                       >
                         <Mail className="h-3 w-3" />
@@ -703,11 +705,11 @@ export function WhatsunityCinematicHero({
             ══════════════════════════════════════════════════════════════ */}
             <div
               dir={isRtl ? "rtl" : "ltr"}
-              className="mt-3.5 w-full"
+              className="mt-3 w-full shrink-0"
             >
-              <div className="mb-1.5 flex items-center justify-between px-1">
+              <div className="mb-1 flex items-center justify-between px-1">
                 <span
-                  className={`text-[11px] font-bold uppercase tracking-wider text-slate-300 ${
+                  className={`text-[10px] xl:text-[11px] font-bold uppercase tracking-wider text-slate-300 ${
                     isRtl ? "wu-font-ar-display" : "wu-font-en-display"
                   }`}
                 >
@@ -729,7 +731,7 @@ export function WhatsunityCinematicHero({
                       <div
                         key={`empty-${sc.id}`}
                         onClick={() => scrollToScene(idx)}
-                        className="cursor-pointer group wu-pressable flex flex-col items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-2.5 text-slate-500 h-[68px] sm:h-[72px] transition hover:border-white/30 hover:bg-white/[0.04]"
+                        className="cursor-pointer group wu-pressable flex flex-col items-center justify-center rounded-2xl border border-dashed border-white/15 bg-white/[0.02] p-2 text-slate-500 h-[64px] xl:h-[68px] transition hover:border-white/30 hover:bg-white/[0.04]"
                         title={isRtl ? "انقر للتمرير إلى هذه المرحلة" : "Click to scroll to this stage"}
                       >
                         <div className="flex items-center gap-1 text-[9px] font-bold wu-font-mono text-slate-400 group-hover:text-slate-300">
@@ -756,7 +758,7 @@ export function WhatsunityCinematicHero({
                       }}
                       type="button"
                       onClick={() => scrollToScene(idx)}
-                      className={`group relative wu-pressable flex flex-col justify-between overflow-hidden rounded-2xl border p-2.5 sm:p-3 text-start backdrop-blur-xl h-[68px] sm:h-[72px] ${
+                      className={`group relative wu-pressable flex flex-col justify-between overflow-hidden rounded-2xl border p-2 xl:p-2.5 text-start backdrop-blur-xl h-[64px] xl:h-[68px] ${
                         isActive
                           ? "border-emerald-500/80 bg-slate-950/95 shadow-[0_0_20px_rgba(0,226,138,0.3)] scale-[1.02]"
                           : "border-white/15 bg-slate-950/75 hover:border-white/30 hover:bg-slate-950/90"
@@ -764,7 +766,7 @@ export function WhatsunityCinematicHero({
                     >
                       <div className="flex items-center justify-between w-full">
                         <div
-                          className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-lg border transition-transform duration-300 group-hover:scale-105"
+                          className="flex h-5 w-5 sm:h-6 sm:w-6 items-center justify-center rounded-lg border transition-transform duration-300 group-hover:scale-105"
                           style={{
                             backgroundColor: isActive
                               ? `${sc.accentColor}25`
@@ -789,9 +791,9 @@ export function WhatsunityCinematicHero({
                         </span>
                       </div>
 
-                      <div className="mt-1">
+                      <div className="mt-0.5">
                         <div
-                          className={`text-[11px] sm:text-xs font-bold truncate transition-colors ${
+                          className={`text-[10.5px] xl:text-[11.5px] font-bold truncate transition-colors ${
                             isActive ? "text-white" : "text-slate-200 group-hover:text-white"
                           } ${isRtl ? "wu-font-ar-display" : "wu-font-en-display"}`}
                         >
@@ -799,7 +801,7 @@ export function WhatsunityCinematicHero({
                         </div>
                       </div>
 
-                      <div className="mt-1.5 h-0.5 w-full rounded-full bg-white/10 overflow-hidden">
+                      <div className="mt-1 h-0.5 w-full rounded-full bg-white/10 overflow-hidden">
                         <div
                           className="h-full rounded-full transition-all duration-300 ease-out"
                           style={{

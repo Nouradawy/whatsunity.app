@@ -37,5 +37,5 @@ We implement industry-standard encryption and procedural safeguards to protect y
 
 ## 7. Contact Us
 If you have questions regarding your privacy or wish to request data deletion, please contact us at:
-**Email:** support@whatsunity.work.gd
+**Email:** support@whatsunity.app
 

@@ -1,76 +1,124 @@
 import { useState, useEffect } from "react";
 import { whatsunityContent, type Locale } from "./features/whatsunity-landing/data/whatsunityContent";
+import { residentLandingData } from "./features/whatsunity-landing/data/residentLandingContent";
 import { WhatsunityHeader } from "./features/whatsunity-landing/components/WhatsunityHeader";
-import { WhatsunityHero } from "./features/whatsunity-landing/components/WhatsunityHero";
-import { WhatsunityCaseStudy } from "./features/whatsunity-landing/components/WhatsunityCaseStudy";
-import { WhatsunityInteractiveHub } from "./features/whatsunity-landing/components/WhatsunityInteractiveHub";
-import { WhatsunityAeoSection } from "./features/whatsunity-landing/components/WhatsunityAeoSection";
-import { WhatsunityFaqSection } from "./features/whatsunity-landing/components/WhatsunityFaqSection";
+import { ResidentLandingPage } from "./features/whatsunity-landing/components/ResidentLandingPage";
+import { TechnicalPage } from "./features/whatsunity-landing/components/TechnicalPage";
 import { WhatsunityCtaFooter } from "./features/whatsunity-landing/components/WhatsunityCtaFooter";
 import { WhatsunityCatalogModal } from "./features/whatsunity-catalog/components/WhatsunityCatalogModal";
 import { WhatsunityPresentationModal } from "./features/whatsunity-landing/components/WhatsunityPresentationModal";
 import { WhatsunityLegalModal } from "./features/whatsunity-landing/components/WhatsunityLegalModal";
+import { BringToBuildingModal } from "./features/whatsunity-landing/components/BringToBuildingModal";
 import type { LegalDocType } from "./features/whatsunity-landing/data/whatsunityLegal";
 
+export type RouteType = "resident" | "technical";
+
 export function App() {
-  // Parse search params on initial load
-  const getSearchParams = () => {
-    if (typeof window === "undefined") return { lang: "ar" as Locale, policy: null };
+  // Parse initial route & search params on load
+  const getInitialState = () => {
+    if (typeof window === "undefined") {
+      return { lang: "en" as Locale, route: "resident" as RouteType, policy: null };
+    }
     const params = new URLSearchParams(window.location.search);
-    const lang = params.get("lang") === "en" ? ("en" as Locale) : ("ar" as Locale);
-    const policy = params.get("policy") === "terms" ? "terms" : params.get("policy") === "privacy" ? "privacy" : null;
-    return { lang, policy: policy as LegalDocType | null };
+    const pathname = window.location.pathname.toLowerCase();
+
+    // Language resolution: URL param ?lang=ar|en or default to English
+    const lang = params.get("lang") === "ar" ? ("ar" as Locale) : ("en" as Locale);
+
+    // Route resolution: path /technical or ?route=technical
+    const isTech =
+      pathname.includes("/technical") ||
+      params.get("route") === "technical" ||
+      window.location.hash === "#architecture";
+
+    const route: RouteType = isTech ? "technical" : "resident";
+    const policy =
+      params.get("policy") === "terms"
+        ? "terms"
+        : params.get("policy") === "privacy"
+          ? "privacy"
+          : null;
+
+    return { lang, route, policy: policy as LegalDocType | null };
   };
 
-  const initialParams = getSearchParams();
-  const [locale, setLocale] = useState<Locale>(initialParams.lang);
+  const initial = getInitialState();
+  const [locale, setLocale] = useState<Locale>(initial.lang);
+  const [route, setRoute] = useState<RouteType>(initial.route);
+
+  // Modals
+  const [bringModalOpen, setBringModalOpen] = useState(false);
   const [catalogOpen, setCatalogOpen] = useState(false);
   const [presentationOpen, setPresentationOpen] = useState(false);
-  const [legalModalOpen, setLegalModalOpen] = useState(Boolean(initialParams.policy));
-  const [legalActiveTab, setLegalActiveTab] = useState<LegalDocType>(initialParams.policy ?? "privacy");
+  const [legalModalOpen, setLegalModalOpen] = useState(Boolean(initial.policy));
+  const [legalActiveTab, setLegalActiveTab] = useState<LegalDocType>(initial.policy ?? "privacy");
 
-  // Sync URL search parameter helper
-  const updateUrlParam = (key: string, value: string | null) => {
+  // Sync URL search params & history
+  const updateUrl = (newLang: Locale, newRoute: RouteType, newPolicy: string | null = null) => {
     if (typeof window === "undefined") return;
     const url = new URL(window.location.href);
-    if (value) {
-      url.searchParams.set(key, value);
+
+    if (newLang) url.searchParams.set("lang", newLang);
+
+    if (newRoute === "technical") {
+      url.searchParams.set("route", "technical");
     } else {
-      url.searchParams.delete(key);
+      url.searchParams.delete("route");
     }
-    window.history.replaceState({}, "", url.toString());
+
+    if (newPolicy) {
+      url.searchParams.set("policy", newPolicy);
+    } else {
+      url.searchParams.delete("policy");
+    }
+
+    window.history.pushState({}, "", url.toString());
   };
 
   const toggleLocale = () => {
     const nextLocale = locale === "ar" ? "en" : "ar";
     setLocale(nextLocale);
-    updateUrlParam("lang", nextLocale);
+    updateUrl(nextLocale, route);
+  };
+
+  const handleNavigateRoute = (newRoute: RouteType) => {
+    setRoute(newRoute);
+    updateUrl(locale, newRoute);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Sync document lang, title, and dir
-  const content = whatsunityContent[locale];
+  const techContent = whatsunityContent[locale];
+  const residentContent = residentLandingData[locale];
   const isRtl = locale === "ar";
 
   useEffect(() => {
-    document.documentElement.dir = "ltr";
+    document.documentElement.dir = isRtl ? "rtl" : "ltr";
     document.documentElement.lang = locale;
     document.documentElement.classList.add("wu-no-scrollbar");
     document.body.classList.add("wu-no-scrollbar");
-    document.title = content.meta.title;
+
+    // Dynamic Title based on Route
+    if (route === "resident") {
+      document.title = residentContent.meta.title;
+    } else {
+      document.title = techContent.meta.title;
+    }
 
     return () => {
       document.documentElement.classList.remove("wu-no-scrollbar");
       document.body.classList.remove("wu-no-scrollbar");
     };
-  }, [locale, content.meta.title]);
+  }, [locale, route, isRtl, residentContent.meta.title, techContent.meta.title]);
 
-  // Sync popstate for back/forward browser buttons
+  // Sync browser back/forward buttons
   useEffect(() => {
     const onPopState = () => {
-      const params = getSearchParams();
-      setLocale(params.lang);
-      if (params.policy) {
-        setLegalActiveTab(params.policy);
+      const state = getInitialState();
+      setLocale(state.lang);
+      setRoute(state.route);
+      if (state.policy) {
+        setLegalActiveTab(state.policy);
         setLegalModalOpen(true);
       } else {
         setLegalModalOpen(false);
@@ -83,83 +131,79 @@ export function App() {
   return (
     <div
       dir={isRtl ? "rtl" : "ltr"}
-      className={`min-h-screen wu-no-scrollbar bg-slate-50 text-slate-900 transition-colors duration-200 dark:bg-[#05070a] dark:text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-950 dark:selection:text-white ${
+      className={`min-h-screen wu-no-scrollbar bg-slate-50 text-slate-900 transition-colors duration-200 dark:bg-[#03060a] dark:text-slate-100 selection:bg-emerald-500/30 selection:text-emerald-950 dark:selection:text-white ${
         isRtl ? "wu-font-ar-body" : "wu-font-en-body"
       }`}
     >
-      {/* Navigation Header */}
+      {/* Global Navigation Header with Route Switcher */}
       <WhatsunityHeader
         locale={locale}
         onToggleLocale={toggleLocale}
-        content={content}
+        content={techContent}
+        route={route}
+        onNavigateRoute={handleNavigateRoute}
+        onOpenBringModal={() => setBringModalOpen(true)}
       />
 
       <main>
-        {/* Impeccable Hero Section */}
-        <WhatsunityHero
-          locale={locale}
-          content={content}
-          onOpenCatalog={() => setCatalogOpen(true)}
-          onOpenPresentation={() => setPresentationOpen(true)}
-        />
-
-        {/* Comprehensive Case Study Section (Directly under Hero) */}
-        <WhatsunityCaseStudy
-          locale={locale}
-          content={content}
-        />
-
-        {/* Interactive Showcase Hub (Catalog & Presentation Launcher) */}
-        <WhatsunityInteractiveHub
-          locale={locale}
-          content={content}
-        />
-
-        {/* Answer Engine Optimization (AEO) for AI Agents & Developers */}
-        <WhatsunityAeoSection
-          locale={locale}
-          content={content}
-        />
-
-        {/* Semantic FAQ Section */}
-        <WhatsunityFaqSection
-          locale={locale}
-          content={content}
-        />
+        {route === "resident" ? (
+          /* Resident Landing Page (10-Section Acquisition Experience) */
+          <ResidentLandingPage
+            locale={locale}
+            onOpenBringModal={() => setBringModalOpen(true)}
+          />
+        ) : (
+          /* Technical Route (Clean Architecture & Operating System Showcase) */
+          <TechnicalPage
+            locale={locale}
+            content={techContent}
+            onOpenCatalog={() => setCatalogOpen(true)}
+            onOpenPresentation={() => setPresentationOpen(true)}
+            onBackToResident={() => handleNavigateRoute("resident")}
+          />
+        )}
       </main>
 
-      {/* Footer & Closing CTA with Legal Policy Integration */}
+      {/* Footer & Closing CTA */}
       <WhatsunityCtaFooter
         locale={locale}
-        content={content}
+        content={techContent}
+        showPreFooterCta={route === "technical"}
         onOpenCatalog={() => setCatalogOpen(true)}
         onOpenPolicy={(tab) => {
           setLegalActiveTab(tab);
           setLegalModalOpen(true);
-          updateUrlParam("policy", tab);
+          updateUrl(locale, route, tab);
         }}
       />
 
-      {/* Global Catalog Modal */}
+      {/* Modal 1: Bring WhatsUnity to Your Building */}
+      <BringToBuildingModal
+        open={bringModalOpen}
+        onClose={() => setBringModalOpen(false)}
+        locale={locale}
+      />
+
+      {/* Modal 2: 20+ Production Screen Catalog */}
       <WhatsunityCatalogModal
         open={catalogOpen}
         onClose={() => setCatalogOpen(false)}
       />
 
-      {/* Global Presentation Deck Modal */}
+      {/* Modal 3: Interactive Pitch Deck */}
       <WhatsunityPresentationModal
         open={presentationOpen}
         onClose={() => setPresentationOpen(false)}
       />
 
-      {/* Global Legal Documents Modal (Privacy Policy & Terms) */}
+      {/* Modal 4: Legal Documents (Privacy Policy & Terms) */}
       <WhatsunityLegalModal
         open={legalModalOpen}
         initialTab={legalActiveTab}
         initialLocale={locale}
         onClose={() => {
           setLegalModalOpen(false);
-          updateUrlParam("policy", null);
+          updateUrl(locale, route, null);
         }}
       />
     </div>

@@ -1,4 +1,4 @@
-﻿# Full Technical Knowledge Base & Architectural Specification
+# Full Technical Knowledge Base & Architectural Specification
 # Noureldin Adawy (Nouradawy) — Founder & Lead Engineer | Full-Stack & Mobile Systems
 # Optimized for AI Agents, LLM Crawlers, and Generative Search Engines (GEO/AEO)
 # Official URL: https://www.nouradawy.tech/
@@ -88,9 +88,18 @@ PART 4: CONTACT & REPOSITORY REFERENCES
 ================================================================================
 - Portfolio: https://www.nouradawy.tech/
 - WhatsUnity Landing: https://whatsunity.app
-- Technical Spec (EN): https://whatsunity.app.md
-- Technical Spec (AR): https://whatsunity.app-ar.md
-- Developer Email: nouradawy@whatsunity.app
-- WhatsApp: @nouradawy
+- Resident App Guide (EN): https://whatsunity.app/resident.md
+- Resident App Guide (AR): https://whatsunity.app/resident-ar.md
+- Technical Spec (EN): https://whatsunity.app/whatsunity.md
+- Technical Spec (AR): https://whatsunity.app/whatsunity-ar.md
+- Feature Matrix (EN): https://whatsunity.app/catalog.md
+- Feature Matrix (AR): https://whatsunity.app/catalog-ar.md
+- Privacy Policy: https://whatsunity.app/privacy_policy.md
+- Terms & Conditions: https://whatsunity.app/terms_conditions.md
+- Agent Registration (auth.md): https://whatsunity.app/auth.md
+- Founder Email: nouradawy@whatsunity.app
+- Support Email: support@whatsunity.app
+- WhatsApp: +201158428601
 - GitHub: https://github.com/Nouradawy
+
 

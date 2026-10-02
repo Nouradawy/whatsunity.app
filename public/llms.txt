@@ -1,7 +1,7 @@
 # Noureldin Adawy (Nouradawy) — Founder & Lead Engineer | Full-Stack & Mobile Systems
 > Portfolio & Technical Index: https://www.nouradawy.tech/
 > WhatsUnity Compound OS: https://whatsunity.app
-> Contact: nouradawy@whatsunity.app | WhatsApp: @nouradawy
+> Contact: nouradawy@whatsunity.app | Support: support@whatsunity.app | WhatsApp: +201158428601
 
 This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini, Claude, Cursor, Copilot) following the /llms.txt standard.
 
@@ -9,12 +9,13 @@ This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini
 
 ## 1. Primary Systems & Architectures
 
+- [WhatsUnity Resident App Guide (English)](/resident.md): Building chat, verified neighbor directory, one home one subscription household licensing, 1-tap photo maintenance, and offline QR guest passes.
+- [WhatsUnity Resident App Guide (Arabic / دليل تطبيق السكان)](/resident-ar.md): دليل تطبيق السكان الكامل: شات العمارة، استطلاعات الرأي الموثقة، بلاغات الصيانة المصورة، وتصاريح الزوار السريعة.
 - [WhatsUnity Residential OS (English Spec)](/whatsunity.md): One home. One subscription. Your entire household included. WhatsUnity turns your compound into a connected, secure, digitally managed community. Built with Flutter Clean Architecture, featuring 100% offline cryptographic QR gatekeeping, SQLite Local Master with 0ms optimistic UI mutations, dual-engine messaging (Telegram MTProto for zero-cost and Appwrite Realtime WebSockets), and an automated 9-role maintenance and security lifecycle.
 - [WhatsUnity Production Screen Catalog (34 Screens & Features)](/catalog.md): Complete machine-readable screen-by-screen feature catalog detailing all 34 production mobile screens across 6 operational personas (Residents, Offline Gatekeepers, Mobile Patrols, Facility Technicians, Chief Engineers, and Community Managers).
 - [WhatsUnity Residential OS (Arabic Spec / المعمارية بالعربية)](/whatsunity-ar.md): وثيقة المواصفات الفنية والمعمارية الكاملة لنظام تشغيل الكمبوندات والمجتمعات السكنية WhatsUnity. توضح بنية فلاتر المتقدمة، وقاعدة SQLite المحلية، وتصاريح QR المشفرة أوفلاين، وحوكمة 9 أدوار تشغيلية.
 - [WhatsUnity Screen Catalog (Arabic / دليل الشاشات بالعربية)](/catalog-ar.md): دليل الشاشات والميزات الإنتاجية الـ 34 كاملاً باللغة العربية مع تفصيل الميزات والخصائص لكل دور.
-- [Portfolio Source & Architecture](https://www.nouradawy.tech/): High-performance portfolio showcasing full-stack mobile, backend, and web systems built with Flutter, React 19, Vite, TanStack Router, Appwrite, and Supabase.
-- [Interactive Resume](/resume.html): Comprehensive technical resume detailing engineering experience, achievements, and technology stack.
+- [WhatsUnity Agent Authentication & Registration (Auth.md)](/auth.md): Automated agent discovery, ID-JAG cryptographic identity assertions, OAuth 2.0 / OIDC discovery, and permission scopes.
 - [Deep Technical Specification Index](/llms-full.txt): Complete code patterns, sync algorithms, data contracts, and benchmark metrics for AI engines.
 
 ---
@@ -57,5 +58,10 @@ This file is optimized for consumption by AI agents (ChatGPT, Perplexity, Gemini
 - [WhatsUnity 34-Screen Production Feature Catalog (EN)](/catalog.md): Complete screen-by-screen feature catalog detailing all 34 production mobile screens across 6 operational roles.
 - [WhatsUnity 34-Screen Production Feature Catalog (AR)](/catalog-ar.md): الفهرس التفصيلي لشاشات المنظومة الـ 34 بالعربية مع شرح ميزات وخصائص كل شاشة.
 - [WhatsUnity Live Landing Page](https://whatsunity.app): Interactive landing page with live 20+ screen catalog and presentation deck.
+- [WhatsUnity Privacy Policy (EN)](/privacy_policy.md): Privacy Policy detailing user data protection, local master encryption, and Appwrite residency.
+- [WhatsUnity Privacy Policy (AR)](/privacy_policy_ar.md): سياسة الخصوصية وحماية بيانات السكان بالعربية.
+- [WhatsUnity Terms & Conditions (EN)](/terms_conditions.md): Terms and conditions governing compound operating system licensing and usage.
+- [WhatsUnity Terms & Conditions (AR)](/terms_conditions_ar.md): الشروط والأحكام الخاصة بمنظومة واتس يونيتي بالعربية.
 - [Full LLM Knowledge Base](/llms-full.txt): Comprehensive deep-context facts, benchmarks, and answers.
+
 

@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import { Sparkles, Layers, Presentation, Maximize2 } from "lucide-react";
 import { WhatsunityCatalogInline } from "@/features/whatsunity-catalog/components/WhatsunityCatalogInline";
 import { WhatsunityCatalogModal } from "@/features/whatsunity-catalog/components/WhatsunityCatalogModal";
-import { WhatsunityScreenMatrix } from "@/features/whatsunity-catalog/components/WhatsunityScreenMatrix";
 import { WhatsunityPresentationModal } from "./WhatsunityPresentationModal";
 import type { Locale, WhatsunityContent } from "../data/whatsunityContent";
 
@@ -20,12 +19,6 @@ export function WhatsunityInteractiveHub({ locale, content }: Props) {
 
   const handleOpenGeneralCatalog = () => {
     setSelectedScreenIndex(undefined);
-    setCatalogInitialTab("catalog");
-    setCatalogModalOpen(true);
-  };
-
-  const handleSelectScreen = (pageIndex: string) => {
-    setSelectedScreenIndex(pageIndex);
     setCatalogInitialTab("catalog");
     setCatalogModalOpen(true);
   };
@@ -191,12 +184,6 @@ export function WhatsunityInteractiveHub({ locale, content }: Props) {
 
           <WhatsunityCatalogInline
             onOpenFullscreen={handleOpenGeneralCatalog}
-          />
-
-          {/* Full 34-Screen Production Feature Matrix for Visitors & AI Agents */}
-          <WhatsunityScreenMatrix
-            locale={locale}
-            onSelectScreen={handleSelectScreen}
           />
         </div>
       </div>

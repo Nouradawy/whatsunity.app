@@ -3,13 +3,13 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-  <!-- WhatsUnity Compound OS (Main Canonical Hub) -->
+  <!-- WhatsUnity Resident App Hub (Canonical) -->
   <url>
     <loc>https://whatsunity.app/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?lang=ar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://whatsunity.app/" />
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,54 +17,70 @@
       <image:title>WhatsUnity Compound OS Official Brand &amp; Platform Logo</image:title>
       <image:caption>WhatsUnity Residential Operating System - Official Brand Logo and Social Media Showcase</image:caption>
     </image:image>
-    <image:image>
-      <image:loc>https://whatsunity.app/assets/whatsunity-catalog/Home_screen_community.png</image:loc>
-      <image:title>WhatsUnity Compound OS - Community Hub &amp; Directory</image:title>
-      <image:caption>WhatsUnity Residential Operating System - Community Feed and Verified Resident Directory</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://whatsunity.app/assets/whatsunity-catalog/gatekeeper_pass_verification_qr.png</image:loc>
-      <image:title>WhatsUnity Offline QR Gate Pass Security</image:title>
-      <image:caption>100% Offline Cryptographic Gatekeeper Scanner for Compound Security</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://whatsunity.app/assets/whatsunity-catalog/technician_portal_assigned_orders.png</image:loc>
-      <image:title>WhatsUnity 5-Role Maintenance Governance Lifecycle</image:title>
-      <image:caption>Automated maintenance dispatching and tracking with timer logs and photo evidence</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://whatsunity.app/assets/whatsunity-catalog/supervisor_incident_control_room.png</image:loc>
-      <image:title>WhatsUnity Security Control Room &amp; Incident Dispatch</image:title>
-      <image:caption>Realtime incident tracking and supervisor dispatch control room</image:caption>
-    </image:image>
   </url>
 
-  <!-- WhatsUnity Arabic Landing Page -->
+  <!-- WhatsUnity Resident Arabic Landing Page -->
   <url>
     <loc>https://whatsunity.app/?lang=ar</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?lang=ar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://whatsunity.app/" />
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
-  <!-- WhatsUnity English Landing Page -->
+  <!-- WhatsUnity Resident English Landing Page -->
   <url>
     <loc>https://whatsunity.app/?lang=en</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?lang=ar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?lang=en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://whatsunity.app/" />
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+
+  <!-- WhatsUnity Technical Architecture & Engineering Case Study Route -->
+  <url>
+    <loc>https://whatsunity.app/?route=technical</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?route=technical&amp;lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?route=technical&amp;lang=en" />
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- WhatsUnity 34-Screen Production Feature Catalog (Standalone HTML) -->
+  <url>
+    <loc>https://whatsunity.app/catalog</loc>
+    <xhtml:link rel="alternate" type="text/markdown" href="https://whatsunity.app/catalog.md" hreflang="en" />
+    <xhtml:link rel="alternate" type="text/markdown" href="https://whatsunity.app/catalog-ar.md" hreflang="ar" />
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- WhatsUnity Resident App Markdown Guide (English) -->
+  <url>
+    <loc>https://whatsunity.app/resident.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- WhatsUnity Resident App Markdown Guide (Arabic) -->
+  <url>
+    <loc>https://whatsunity.app/resident-ar.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- WhatsUnity Deep Technical Architecture Specification (English Markdown) -->
   <url>
     <loc>https://whatsunity.app/whatsunity.md</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -72,8 +88,46 @@
   <!-- WhatsUnity Deep Technical Architecture Specification (Arabic Markdown) -->
   <url>
     <loc>https://whatsunity.app/whatsunity-ar.md</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- WhatsUnity 34-Screen Catalog Markdown (English) -->
+  <url>
+    <loc>https://whatsunity.app/catalog.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- WhatsUnity 34-Screen Catalog Markdown (Arabic) -->
+  <url>
+    <loc>https://whatsunity.app/catalog-ar.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- WhatsUnity Agent Authentication Specification (Auth.md) -->
+  <url>
+    <loc>https://whatsunity.app/auth.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- LLM Context Files -->
+  <url>
+    <loc>https://whatsunity.app/llms.txt</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://whatsunity.app/llms-full.txt</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
@@ -82,7 +136,7 @@
     <loc>https://whatsunity.app/privacy-policy.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?policy=privacy&amp;lang=ar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?policy=privacy&amp;lang=en" />
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -92,9 +146,35 @@
     <loc>https://whatsunity.app/terms-conditions.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://whatsunity.app/?policy=terms&amp;lang=ar" />
     <xhtml:link rel="alternate" hreflang="en" href="https://whatsunity.app/?policy=terms&amp;lang=en" />
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+
+  <!-- WhatsUnity Markdown Policies -->
+  <url>
+    <loc>https://whatsunity.app/privacy_policy.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://whatsunity.app/privacy_policy_ar.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://whatsunity.app/terms_conditions.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://whatsunity.app/terms_conditions_ar.md</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
 </urlset>

@@ -12,6 +12,14 @@ Allow: /
 Allow: /whatsunity
 Allow: /whatsunity.md
 Allow: /whatsunity-ar.md
+Allow: /resident.md
+Allow: /resident-ar.md
+Allow: /catalog.md
+Allow: /catalog-ar.md
+Allow: /privacy_policy.md
+Allow: /privacy_policy_ar.md
+Allow: /terms_conditions.md
+Allow: /terms_conditions_ar.md
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /auth.md

@@ -90,7 +90,7 @@ export function WhatsunityCaseStudy({ locale, content }: Props) {
         {/* ══════════════════════════════════════════════════════════════
             PART 1: THE PROBLEM STATEMENT & MISSION (Screenshot 2 Fix)
         ══════════════════════════════════════════════════════════════ */}
-        <div className="mt-20 sm:mt-28">
+        <div id="the-problem" className="mt-20 sm:mt-28 scroll-mt-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -3,21 +3,32 @@ import path from "path";
 
 export default function handler(req, res) {
   const url = req.url || "/";
-  let filename = "whatsunity.md";
-  let tokens = "2380";
+  const isArabic = url.includes("lang=ar");
 
-  if (url.includes("privacy-policy")) {
-    filename = "privacy_policy.md";
-    tokens = "850";
-  } else if (url.includes("terms-conditions")) {
-    filename = "terms_conditions.md";
-    tokens = "720";
+  let filename = "resident.md";
+  let tokens = "980";
+
+  if (url.includes("privacy-policy") || url.includes("policy=privacy")) {
+    filename = isArabic ? "privacy_policy_ar.md" : "privacy_policy.md";
+    tokens = isArabic ? "980" : "850";
+  } else if (url.includes("terms-conditions") || url.includes("policy=terms")) {
+    filename = isArabic ? "terms_conditions_ar.md" : "terms_conditions.md";
+    tokens = isArabic ? "820" : "720";
   } else if (url.includes("catalog")) {
-    filename = url.includes("lang=ar") ? "catalog-ar.md" : "catalog.md";
-    tokens = "4500";
-  } else if (url.includes("lang=ar")) {
-    filename = "whatsunity-ar.md";
-    tokens = "2230";
+    filename = isArabic ? "catalog-ar.md" : "catalog.md";
+    tokens = isArabic ? "5200" : "4500";
+  } else if (url.includes("auth.md") || url.includes("/auth")) {
+    filename = "auth.md";
+    tokens = "910";
+  } else if (url.includes("route=technical") || url.includes("whatsunity") || url.includes("casestudy")) {
+    filename = isArabic ? "whatsunity-ar.md" : "whatsunity.md";
+    tokens = isArabic ? "2230" : "2380";
+  } else if (url.includes("route=resident") || url === "/" || url.startsWith("/?") || url === "") {
+    filename = isArabic ? "resident-ar.md" : "resident.md";
+    tokens = isArabic ? "1100" : "980";
+  } else if (isArabic) {
+    filename = "resident-ar.md";
+    tokens = "1100";
   }
 
   // Look in dist or public or root

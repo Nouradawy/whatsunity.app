@@ -28,6 +28,18 @@
       ]
     },
     {
+      "identifier": "urn:air:whatsunity.app:doc:resident-app",
+      "displayName": "WhatsUnity Resident App & Community Guide",
+      "type": "text/markdown",
+      "url": "https://whatsunity.app/resident.md",
+      "representativeQueries": [
+        "whatsunity resident app features",
+        "building chat without whatsapp groups",
+        "residential polls and photo maintenance tickets",
+        "visitor passes with offline qr gates"
+      ]
+    },
+    {
       "identifier": "urn:air:whatsunity.app:doc:system-spec",
       "displayName": "WhatsUnity Architecture & LLM Context",
       "type": "text/markdown",

@@ -39,24 +39,31 @@ const agentDiscoveryAndNegotiationPlugin = () => {
 
     // 2. Markdown Content Negotiation (Accept: text/markdown)
     if (accept.includes("text/markdown")) {
-      let mdFile = "whatsunity.md";
-      let tokens = 2380;
+      const isArabic = url.includes("lang=ar");
+      let mdFile = "resident.md";
+      let tokens = 980;
 
-      if (pathname.includes("privacy-policy")) {
-        mdFile = "privacy_policy.md";
-        tokens = 850;
-      } else if (pathname.includes("terms-conditions")) {
-        mdFile = "terms_conditions.md";
-        tokens = 720;
+      if (pathname.includes("privacy-policy") || url.includes("policy=privacy")) {
+        mdFile = isArabic ? "privacy_policy_ar.md" : "privacy_policy.md";
+        tokens = isArabic ? 980 : 850;
+      } else if (pathname.includes("terms-conditions") || url.includes("policy=terms")) {
+        mdFile = isArabic ? "terms_conditions_ar.md" : "terms_conditions.md";
+        tokens = isArabic ? 820 : 720;
       } else if (pathname.includes("catalog")) {
-        mdFile = url.includes("lang=ar") ? "catalog-ar.md" : "catalog.md";
-        tokens = 4500;
-      } else if (pathname === "/auth.md") {
+        mdFile = isArabic ? "catalog-ar.md" : "catalog.md";
+        tokens = isArabic ? 5200 : 4500;
+      } else if (pathname === "/auth.md" || pathname === "/auth") {
         mdFile = "auth.md";
         tokens = 910;
-      } else if (url.includes("lang=ar")) {
-        mdFile = "whatsunity-ar.md";
-        tokens = 2230;
+      } else if (url.includes("route=technical") || pathname.includes("whatsunity") || pathname.includes("casestudy")) {
+        mdFile = isArabic ? "whatsunity-ar.md" : "whatsunity.md";
+        tokens = isArabic ? 2230 : 2380;
+      } else if (url.includes("route=resident") || pathname === "/" || url.startsWith("/?") || pathname === "") {
+        mdFile = isArabic ? "resident-ar.md" : "resident.md";
+        tokens = isArabic ? 1100 : 980;
+      } else if (isArabic) {
+        mdFile = "resident-ar.md";
+        tokens = 1100;
       }
 
       // Check public or dist candidate

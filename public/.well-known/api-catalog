@@ -11,6 +11,16 @@
       ],
       "service-doc": [
         {
+          "href": "https://whatsunity.app/resident.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Resident App Guide & Overview (English)"
+        },
+        {
+          "href": "https://whatsunity.app/resident-ar.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Resident App Guide & Overview (Arabic)"
+        },
+        {
           "href": "https://whatsunity.app/whatsunity.md",
           "type": "text/markdown",
           "title": "WhatsUnity Residential OS Architecture & Spec (English)"
@@ -29,6 +39,35 @@
           "href": "https://whatsunity.app/catalog-ar.md",
           "type": "text/markdown",
           "title": "WhatsUnity 34-Screen Production Feature Catalog (Arabic)"
+        },
+        {
+          "href": "https://whatsunity.app/auth.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Agent Authentication & Registration Spec"
+        }
+      ],
+      "privacy-policy": [
+        {
+          "href": "https://whatsunity.app/privacy_policy.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Privacy Policy (English)"
+        },
+        {
+          "href": "https://whatsunity.app/privacy_policy_ar.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Privacy Policy (Arabic)"
+        }
+      ],
+      "terms-of-service": [
+        {
+          "href": "https://whatsunity.app/terms_conditions.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Terms & Conditions (English)"
+        },
+        {
+          "href": "https://whatsunity.app/terms_conditions_ar.md",
+          "type": "text/markdown",
+          "title": "WhatsUnity Terms & Conditions (Arabic)"
         }
       ],
       "describedby": [

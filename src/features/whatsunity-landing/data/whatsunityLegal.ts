@@ -78,7 +78,7 @@ export const whatsunityLegalData: LegalData = {
       downloadRaw: "تحميل الملف الأصلي",
       close: "إغلاق النافذة",
       officialNotice:
-        "تخضع هذه السياسة لأحكام حماية البيانات والشفافية. للاستفسارات القانونية: support@whatsunity.work.gd",
+        "تخضع هذه السياسة لأحكام حماية البيانات والشفافية. للاستفسارات القانونية: support@whatsunity.app",
       subprocessorsTitle: "مزودو الخدمات ومعالجو البيانات الخارجيون (Third-Party Subprocessors)",
       footerPrivacy: "سياسة الخصوصية",
       footerTerms: "الشروط والأحكام",
@@ -102,7 +102,7 @@ export const whatsunityLegalData: LegalData = {
       downloadRaw: "Download Raw File",
       close: "Close Window",
       officialNotice:
-        "Subject to privacy protection regulations. Direct legal inquiry: support@whatsunity.work.gd",
+        "Subject to privacy protection regulations. Direct legal inquiry: support@whatsunity.app",
       subprocessorsTitle: "Authorized Third-Party Service Providers & Subprocessors",
       footerPrivacy: "Privacy Policy",
       footerTerms: "Terms & Conditions",
@@ -118,7 +118,7 @@ export const whatsunityLegalData: LegalData = {
       badge: "Compliance & Data Governance v2.0",
       effectiveDate: "2026-04-30",
       serviceProvider: "Nour Adawy",
-      supportEmail: "support@whatsunity.work.gd",
+      supportEmail: "support@whatsunity.app",
       summary:
         "This Privacy Policy explains how WhatsUnity ('the Application'), developed by Nour Adawy ('the Service Provider'), collects, uses, and protects your information across Appwrite Cloud, SQLite, Cloudflare R2, Gumlet, and Firebase.",
       rawMarkdown: `# Privacy Policy
@@ -160,7 +160,7 @@ We implement industry-standard encryption and procedural safeguards to protect y
 
 ## 7. Contact Us
 If you have questions regarding your privacy or wish to request data deletion, please contact us at:
-**Email:** support@whatsunity.work.gd`,
+**Email:** support@whatsunity.app`,
       sections: [
         {
           id: "scope",
@@ -279,7 +279,7 @@ If you have questions regarding your privacy or wish to request data deletion, p
           title: "8. Contact Us",
           content: [
             "If you have questions regarding your privacy or wish to request data deletion, please contact us at:",
-            "Email: support@whatsunity.work.gd",
+            "Email: support@whatsunity.app",
           ],
         },
       ],
@@ -290,7 +290,7 @@ If you have questions regarding your privacy or wish to request data deletion, p
       badge: "الحوكمة وحماية البيانات v2.0",
       effectiveDate: "2026-04-30",
       serviceProvider: "نور عدوي (Nour Adawy)",
-      supportEmail: "support@whatsunity.work.gd",
+      supportEmail: "support@whatsunity.app",
       summary:
         "توضح سياسة الخصوصية هذه كيفية قيام WhatsUnity، الذي طوره نور عدوي، بجمع معلوماتك واستخدامها وحمايتها عبر Appwrite Cloud و SQLite و Cloudflare R2 و Gumlet و Firebase.",
       rawMarkdown: `# سياسة الخصوصية
@@ -332,7 +332,7 @@ If you have questions regarding your privacy or wish to request data deletion, p
 
 ## 7. اتصل بنا
 إذا كانت لديك أسئلة بخصوص خصوصيتك أو ترغب في طلب حذف البيانات، يرجى الاتصال بنا على:
-**البريد الإلكتروني:** support@whatsunity.work.gd`,
+**البريد الإلكتروني:** support@whatsunity.app`,
       sections: [
         {
           id: "scope",
@@ -451,7 +451,7 @@ If you have questions regarding your privacy or wish to request data deletion, p
           title: "8. اتصل بنا",
           content: [
             "إذا كانت لديك أسئلة بخصوص خصوصيتك أو ترغب في طلب حذف البيانات، يرجى الاتصال بنا على:",
-            "البريد الإلكتروني: support@whatsunity.work.gd",
+            "البريد الإلكتروني: support@whatsunity.app",
           ],
         },
       ],
@@ -464,7 +464,7 @@ If you have questions regarding your privacy or wish to request data deletion, p
       badge: "User Agreement & Service Terms v2.0",
       effectiveDate: "2026-04-30",
       serviceProvider: "Nour Adawy",
-      supportEmail: "support@whatsunity.work.gd",
+      supportEmail: "support@whatsunity.app",
       summary:
         "By downloading or using WhatsUnity ('the Application'), you agree to these Terms & Conditions covering scope of service, residency verification, acceptable conduct, and liability limits.",
       rawMarkdown: `# Terms & Conditions
@@ -508,7 +508,7 @@ We may update these Terms from time to time. Continued use of the Application af
 
 ## 9. Contact Us
 For any inquiries regarding these Terms, please contact:
-**Email:** support@whatsunity.work.gd`,
+**Email:** support@whatsunity.app`,
       sections: [
         {
           id: "scope",
@@ -604,7 +604,7 @@ For any inquiries regarding these Terms, please contact:
           title: "9. Contact Us",
           content: [
             "For any inquiries regarding these Terms, please contact:",
-            "Email: support@whatsunity.work.gd",
+            "Email: support@whatsunity.app",
           ],
         },
       ],
@@ -615,7 +615,7 @@ For any inquiries regarding these Terms, please contact:
       badge: "اتفاقية الاستخدام وشروط الخدمة v2.0",
       effectiveDate: "2026-04-30",
       serviceProvider: "نور عدوي (Nour Adawy)",
-      supportEmail: "support@whatsunity.work.gd",
+      supportEmail: "support@whatsunity.app",
       summary:
         "بتحميل أو استخدام تطبيق WhatsUnity، فإنك توافق على هذه الشروط والأحكام التي تحكم نطاق الخدمة، والتحقق من الحسابات، وقواعد الاستخدام المقبول، وتحديد المسؤولية.",
       rawMarkdown: `# الشروط والأحكام
@@ -659,7 +659,7 @@ For any inquiries regarding these Terms, please contact:
 
 ## 9. اتصل بنا
 لأي استفسارات بخصوص هذه الشروط، يرجى الاتصال بنا على:
-**البريد الإلكتروني:** support@whatsunity.work.gd`,
+**البريد الإلكتروني:** support@whatsunity.app`,
       sections: [
         {
           id: "scope",
@@ -751,7 +751,7 @@ For any inquiries regarding these Terms, please contact:
           title: "9. اتصل بنا",
           content: [
             "لأي استفسارات بخصوص هذه الشروط، يرجى الاتصال بنا على:",
-            "البريد الإلكتروني: support@whatsunity.work.gd",
+            "البريد الإلكتروني: support@whatsunity.app",
           ],
         },
       ],
